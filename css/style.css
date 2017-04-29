@@ -6,8 +6,8 @@ nav .brand-logo {
 }
 
 .my_breadcrumbs {
-	height:30px;
-	line-height: 30px;
+	height:25px;
+	line-height: 25px;
 }
 
 p {
@@ -56,6 +56,40 @@ footer.page-footer {
 p.notes {
 	color: #9e9e9e;
 	font-size: 0.8rem;
+}
+
+.card-content {
+  margin-top: 17xpx;
+}
+
+/* Tap target*/
+.tap-target-wrapper {
+	right: -348px;
+	bottom: -327px;
+	position: fixed;
+}
+
+.tap-target-content {
+	width: 456px;
+	height: 400px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	padding: 56px;
+	vertical-align: bottom;
+}
+
+.tap-target-wave {
+	top: 344px;
+	left: 344px;
+	width: 112px;
+	height: 112px;
+}
+
+.fixed-action-btn {
+	bottom: 45px;
+	right: 24px;
 }
 
 /* Parllax */

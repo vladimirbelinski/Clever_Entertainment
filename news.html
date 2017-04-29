@@ -46,7 +46,7 @@
             </ul>
         </div>
     </nav>
-	<nav class="my_breadcrumbs">
+	<nav class="my_breadcrumbs" role="navigation">
 		<div class="nav-wrapper">
 			<div class="col s12 teal lighten-2">
 				<a href="index.html" class="breadcrumb">Home</a>
@@ -62,28 +62,26 @@
 					<div class="row">
 						<div class="col s12">
 							<div class="icon-block">
-								<h5 class="grey-text text-darken-4"><i class="material-icons">description</i> NOTÍCIAS</h5>
+								<h5 class="grey-text text-darken-4"><i class="material-icons">description</i> NOTÍCIAS <span class="new badge waves-effect waves-light" onclick="$('.tap-target').tapTarget('open')">DESCUBRA</span></h5>
 							</div>
 						</div>
 					</div>
 					
 					<div class="row">
-					<a class="waves-effect waves-light btn" onclick="$('.tap-target').tapTarget('open')">NOVIDADES</a>
-					<!-- <a class="waves-effect waves-light btn" onclick="$('.tap-target').tapTarget('close')">Close tap target</a>-->
-					<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-          				<a id="menu" class="btn btn-floating btn-large teal"><i class="material-icons">menu</i></a>
-        			</div>
-					<div class="tap-target-wrapper" style="right: -348px; bottom: -327px; position: fixed;">
-						<div class="tap-target teal" data-activates="menu">
-          					<div class="tap-target-content white-text" style="width: 456px; height: 400px; top: 0px; right: 0px; bottom: 0px; left: 0px; padding: 56px; vertical-align: bottom;">
-            					<h5>Novidades</h5>
-            					<p class="white-text">Em breve estaremos modificando a página de notícias para aprimorar sua experiência. Aguarde... ;)</p>
-          					</div>
-        				</div>
-						<div class="tap-target-wave" style="top: 344px; left: 344px; width: 112px; height: 112px;">
-							<a class="btn btn-floating btn-large teal tap-target-origin"><i class="material-icons">menu</i></a>
+						<div class="fixed-action-btn">
+							<a id="menu" class="btn btn-floating btn-large teal"><i class="material-icons">menu</i></a>
 						</div>
-					</div>
+						<div class="tap-target-wrapper">
+							<div class="tap-target teal" data-activates="menu">
+								<div class="tap-target-content white-text">
+									<h5>Novidades</h5>
+									<p class="white-text">Em breve estaremos modificando a página de notícias para aprimorar sua experiência. Aguarde... ;)</p>
+								</div>
+							</div>
+							<div class="tap-target-wave">
+								<a class="btn btn-floating btn-large teal tap-target-origin"><i class="material-icons">menu</i></a>
+							</div>
+						</div>
 					</div>
 					
 					<div class="row">
@@ -142,12 +140,12 @@
             <div class="row">
                 <div class="col s12 m5 center">
                     <picture class="hiddenprint">
-						<source media="(min-width: 850px)" srcset="images/logo.jpg">
+						<source media="(min-width: 992px)" srcset="images/logo.jpg">
 						<source media="(min-width: 200px)" srcset="images/logoSmall.jpg">
 						<img src="images/logo.jpg" alt="Clever Entertainment Logo" style="width:auto">
 					</picture>
                 </div>
-                <div class="col s5 offset-s1 m4">
+                <div class="col s5 offset-s1 m3 offset-m1">
                     <h5 class="white-text">Contato</h5>
                     <p class="white-text">+55(49)3333-3333</p>
                 </div>
@@ -155,21 +153,21 @@
                     <h5 class="white-text">Nos siga</h5>
                     <a href="https://open.spotify.com/user/vladimirbelinski">
 						<picture class="hiddenprint">
-							<source media="(min-width: 850px)" srcset="images/spotify.png">
+							<source media="(min-width: 992px)" srcset="images/spotify.png">
 							<source media="(min-width: 200px)" srcset="images/spotifySmall.png">
 							<img src="images/spotify.png" alt="Spotify" style="width:auto">
 						</picture>
 					</a>
                     <a href="https://www.facebook.com/vlbelinski">
 						<picture class="hiddenprint">
-							<source media="(min-width: 850px)" srcset="images/facebook.png">
+							<source media="(min-width: 992px)" srcset="images/facebook.png">
 							<source media="(min-width: 200px)" srcset="images/facebookSmall.png">
 							<img src="images/facebook.png" alt="Facebook" style="width:auto">
 						</picture>
 					</a>
                     <a href="https://github.com/vladimirbelinski/Projeto_1__WEB">
 						<picture class="hiddenprint">
-							<source media="(min-width: 850px)" srcset="images/github.png">
+							<source media="(min-width: 992px)" srcset="images/github.png">
 							<source media="(min-width: 200px)" srcset="images/githubSmall.png">
 							<img src="images/github.png" alt="GitHub" style="width:auto">
 						</picture>
@@ -187,7 +185,7 @@
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>
-    <script src="js/init.js"></script>
+	<script src="js/init.js"></script>
     
 </body>
 </html>

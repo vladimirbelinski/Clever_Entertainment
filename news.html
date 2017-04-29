@@ -1,0 +1,193 @@
+<!-- Arquivo: news.html
+	 Autor: Vladimir Belinski 
+	 Descrição: o presente arquivo consiste no arquivo (.html) de audições do primeiro trabalho do CCR Tópicos Especiais em
+				Desenvolvimento Web, CC-UFFS 2017.1, ministrado pela professora Ma. Andressa Sebben
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>:: Clever Entertainment ::</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo_icon.png" />
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection,print"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection,print"/>
+</head>
+    
+<body>
+    
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="index.html" class="brand-logo">
+				<picture class="hiddenprint">
+					<source media="(min-width: 600px)" srcset="images/logoB.jpg">
+					<source media="(min-width: 200px)" srcset="images/logoBSmall.jpg">
+					<img src="images/logo.jpg" alt="Clever Entertainment Logo" style="width:auto">
+				</picture>
+			</a>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+				<li><a href="about.html">Sobre Clever</a></li>
+				<li><a href="artists.html">Artistas</a></li>
+				<li><a href="gallery.html">Galeria</a></li>
+				<li><a href="news.html">Notícias</a></li>
+                <li><a href="audit.html">Audições</a></li>
+            </ul>
+            <ul class="side-nav" id="nav-mobile" >
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Sobre Clever</a></li>
+                <li><a href="artists.html">Artistas</a></li>
+				<li><a href="gallery.html">Galeria</a></li>
+                <li><a href="news.html">Notícias</a></li>
+                <li><a href="audit.html">Audições</a></li>
+            </ul>
+        </div>
+    </nav>
+	<nav class="my_breadcrumbs">
+		<div class="nav-wrapper">
+			<div class="col s12 teal lighten-2">
+				<a href="index.html" class="breadcrumb">Home</a>
+				<a class="breadcrumb">Notícias</a>
+			</div>
+		</div>
+	</nav>
+	
+	<main>
+		<div class="container">
+			<div class="section">
+				<section>
+					<div class="row">
+						<div class="col s12">
+							<div class="icon-block">
+								<h5 class="grey-text text-darken-4"><i class="material-icons">description</i> NOTÍCIAS</h5>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row">
+					<a class="waves-effect waves-light btn" onclick="$('.tap-target').tapTarget('open')">NOVIDADES</a>
+					<!-- <a class="waves-effect waves-light btn" onclick="$('.tap-target').tapTarget('close')">Close tap target</a>-->
+					<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+          				<a id="menu" class="btn btn-floating btn-large teal"><i class="material-icons">menu</i></a>
+        			</div>
+					<div class="tap-target-wrapper" style="right: -348px; bottom: -327px; position: fixed;">
+						<div class="tap-target teal" data-activates="menu">
+          					<div class="tap-target-content white-text" style="width: 456px; height: 400px; top: 0px; right: 0px; bottom: 0px; left: 0px; padding: 56px; vertical-align: bottom;">
+            					<h5>Novidades</h5>
+            					<p class="white-text">Em breve estaremos modificando a página de notícias para aprimorar sua experiência. Aguarde... ;)</p>
+          					</div>
+        				</div>
+						<div class="tap-target-wave" style="top: 344px; left: 344px; width: 112px; height: 112px;">
+							<a class="btn btn-floating btn-large teal tap-target-origin"><i class="material-icons">menu</i></a>
+						</div>
+					</div>
+					</div>
+					
+					<div class="row">
+						<div class="col s12 m6 xl4">
+						<div class="card">
+							<div class="card-image waves-effect waves-block waves-light hiddenprint">
+								<img class="activator" src="images/shinee.jpg" alt="SHINee">
+							</div>
+							<div class="card-content">
+								<span class="card-title activator grey-text text-darken-4">SHiNee<i class="material-icons right">more_vert</i></span>
+								<p class="light">[20/04/2017]</p>
+								<p>SHINee participará do New Yang Nam Show na próxima semana...</p>
+							</div>
+							<div class="card-reveal">
+								<span class="card-title grey-text text-darken-4">SHiNee<i class="material-icons right">close</i>
+								</span>
+								<p class="light">[20/04/2017]</p>
+								<p>SHINee participará do New Yang Nam Show na próxima semana.</p>
+								<p> Mais informações...</p>
+							</div>
+						</div>
+							</div>
+						
+						
+                        <div class="col s12 m6 xl4">						
+						<div class="card">
+							<div class="card-image waves-effect waves-block waves-light hiddenprint">
+								<img class="activator" src="images/monstax.jpg" alt="Monsta X">
+							</div>
+							<div class="card-content">
+								<span class="card-title activator grey-text text-darken-4">Monsta X<i class="material-icons right">more_vert</i></span>
+								<p class="light">[19/04/2017]</p>
+								<p>Monsta X lança seu novo álbum: THE CLAN pt.2.5 [BEAUTIFUL]...</p>
+							</div>
+							<div class="card-reveal">
+								<span class="card-title grey-text text-darken-4">Monsta X<i class="material-icons right">close</i></span>
+								<p class="light">[19/04/2017]</p>
+								<p>Monsta X lança seu novo álbum: THE CLAN pt.2.5 [BEAUTIFUL]</p>
+								<p> Mais informações...</p>
+							</div>
+						</div>
+						</div>
+						
+				
+					</div>
+				</section>
+				
+				 
+    
+			</div>
+		</div>
+	</main>
+	
+	<footer class="page-footer grey darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m5 center">
+                    <picture class="hiddenprint">
+						<source media="(min-width: 850px)" srcset="images/logo.jpg">
+						<source media="(min-width: 200px)" srcset="images/logoSmall.jpg">
+						<img src="images/logo.jpg" alt="Clever Entertainment Logo" style="width:auto">
+					</picture>
+                </div>
+                <div class="col s5 offset-s1 m4">
+                    <h5 class="white-text">Contato</h5>
+                    <p class="white-text">+55(49)3333-3333</p>
+                </div>
+                <div class="col s5 offset-s1 m3">
+                    <h5 class="white-text">Nos siga</h5>
+                    <a href="https://open.spotify.com/user/vladimirbelinski">
+						<picture class="hiddenprint">
+							<source media="(min-width: 850px)" srcset="images/spotify.png">
+							<source media="(min-width: 200px)" srcset="images/spotifySmall.png">
+							<img src="images/spotify.png" alt="Spotify" style="width:auto">
+						</picture>
+					</a>
+                    <a href="https://www.facebook.com/vlbelinski">
+						<picture class="hiddenprint">
+							<source media="(min-width: 850px)" srcset="images/facebook.png">
+							<source media="(min-width: 200px)" srcset="images/facebookSmall.png">
+							<img src="images/facebook.png" alt="Facebook" style="width:auto">
+						</picture>
+					</a>
+                    <a href="https://github.com/vladimirbelinski/Projeto_1__WEB">
+						<picture class="hiddenprint">
+							<source media="(min-width: 850px)" srcset="images/github.png">
+							<source media="(min-width: 200px)" srcset="images/githubSmall.png">
+							<img src="images/github.png" alt="GitHub" style="width:auto">
+						</picture>
+					</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright grey darken-4">
+            <div class="container">
+                Copyright © 2017 CLEVER ENTERTAINMENT, TODOS OS DIREITOS RESERVADOS.
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    
+</body>
+</html>

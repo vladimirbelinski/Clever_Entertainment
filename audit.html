@@ -31,12 +31,11 @@
 			</a>
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-				<li><a href="index.html">Home</a></li>
                 <li><a href="about.html">Sobre Clever</a></li>
                 <li><a href="artists.html">Artistas</a></li>
 				<li><a href="gallery.html">Galeria</a></li>
                 <li><a href="news.html">Notícias</a></li>
-                <li><a href="audit.html">Audições</a></li>
+				<li><a href="audit.html">Audições</a></li>
             </ul>
             <ul class="side-nav" id="nav-mobile" >
                 <li><a href="index.html">Home</a></li>
@@ -48,130 +47,139 @@
             </ul>
         </div>
     </nav>
+	<nav class="my_breadcrumbs">
+		<div class="nav-wrapper">
+			<div class="col s12 teal lighten-2">
+				<a href="index.html" class="breadcrumb">Home</a>
+				<a class="breadcrumb">Audições</a>
+			</div>
+		</div>
+	</nav>
     
     <main>		
         <div class="container">
 			<div class="section">
-				<div class="row">
-					<form id="audit_register" name="audit_register" class="col s12">
-						<div class="row">
-							<div class="icon-block">
-							<h2 class="center grey-text text-darken-4"><i class="material-icons">language</i></h2>
-							<h5 class="center">CADASTRO PARA AUDIÇÃO GLOBAL</h5>
-							</div>
-						</div>
-						<div class="row">
-							<div class="input-field col s12 m6">
-								<i class="material-icons prefix">account_circle</i>
-								<input type="text" id="first_and_mid_name" name="first_and_mid_name" placeholder="Nome *" autofocus>
-								<label for="first_and_mid_name" class="sr-only">Nome *</label>
-								<div class="input-field">
-				  					<div class="required_error" id="first_and_mid_name_error"></div>
-			  					</div>
-							</div>
-							<div class="input-field col s12 m6">
-								<i class="material-icons prefix">account_circle</i>
-								<input type="text" id="last_name" name="last_name" placeholder="Sobrenome *">
-								<label for="last_name" class="sr-only">Sobrenome *</label>
-								<div class="input-field">
-				  					<div class="required_error" id="last_name_error"></div>
-			  					</div>
-							</div>
-							
-						</div>
-						<div class="row">
-							<div class="input-field col s12 m6">
-								<i class="material-icons prefix">today</i>
-								<input type="date" id="birthday_date" name="birthday_date" placeholder="Data de nascimento *" class="datepicker picker__input" required>
-								<label for="birthday_date" class="sr-only">Data de nascimento *</label>
-								<div class="input-field">
-				  					<div class="required_error" id="birthday_date_error"></div>
-			  					</div>
-							</div>
-							<div class="input-field col s12 m6">											
-								<i class="material-icons prefix">perm_identity</i>
-								<label for="cgender" class="radio-label offset-m1 sr-only">Sexo *</label>
-								<div class="radio-box" id="radio-box">
-									<input type="radio" id="gender_male" name="cgender" class="with-gap validate"/>
-									<label name="cgender" for="gender_male">Masculino</label>
-									<input type="radio" id="gender_female" name="cgender"  class="with-gap"/>
-									<label name="cgender" for="gender_female">Feminino</label>
-									<input type="radio" id="gender_other" name="cgender" class="with-gap"/>
-									<label name="cgender" for="gender_other">Outro</label>
+				<section>
+					<div class="row">
+						<form id="audit_register" name="audit_register" class="col s12">
+							<div class="row">
+								<div class="icon-block">
+								<h2 class="center grey-text text-darken-4"><i class="material-icons">language</i></h2>
+								<h5 class="center">CADASTRO PARA AUDIÇÃO GLOBAL</h5>
 								</div>
-								<div class="input-field">
-				  					<div class="required_error_select-radio" id="gender_error"></div>
-			  					</div>
-							</div>	
-						</div>
-						<div class="row">
-							<div class="input-field col s12 m6">
-								<i class="material-icons prefix">email</i>
-								<input type="email" id="email" name="email" placeholder="Email * (e.g. nome@provedor.com)">
-								<label for="email" class="sr-only">Email *</label>
-								<div class="input-field">
-				  					<div class="required_error" id="email_error"></div>
-			  					</div>
 							</div>
-							<div class="input-field col s12 m6">
-								<i class="material-icons prefix">phone</i>
-								<input type="tel" id="telephone" name="telephone" placeholder="Telefone: +xx(xx)xxxxx-xxxx">
-								<label for="telephone" class="sr-only">Telefone</label>
-								<div class="input-field">
-				  					<div class="required_error" id="telephone_error"></div>
-			  					</div>
+							<div class="row">
+								<div class="input-field col s12 m12 l6 xl6">
+									<i class="material-icons prefix">account_circle</i>
+									<input type="text" id="first_and_mid_name" name="first_and_mid_name" placeholder="Nome *" autofocus>
+									<label for="first_and_mid_name" class="sr-only">Nome *</label>
+									<div class="input-field">
+										<div class="required_error" id="first_and_mid_name_error"></div>
+									</div>
+								</div>
+								<div class="input-field col s12 m12 l6 xl6">
+									<i class="material-icons prefix">account_circle</i>
+									<input type="text" id="last_name" name="last_name" placeholder="Sobrenome *">
+									<label for="last_name" class="sr-only">Sobrenome *</label>
+									<div class="input-field">
+										<div class="required_error" id="last_name_error"></div>
+									</div>
+								</div>
 							</div>
-						</div>
-						<div class="row">
-							<div class="input-field col s12 m6">
-								<i class="material-icons prefix">location_on</i>
-								<select name="audit_country" id="audit_country" class="icons">
-									<option value="" disabled selected="selected">Escolha o país da audição *</option>
-									<option value="1" data-icon="images/countries/Brazil.png" class="circle">Brasil</option>
-									<option value="2" data-icon="images/countries/Canada.png" class="circle">Canadá</option>
-									<option value="3" data-icon="images/countries/China.png" class="circle">China</option>
-									<option value="4" data-icon="images/countries/South-Korea.png" class="circle">Coreia do Sul</option>
-									<option value="5" data-icon="images/countries/United-States.png" class="circle">Estados Unidos</option>
-									<option value="6" data-icon="images/countries/Thailand.png" class="circle">Tailândia</option>
-								</select>
-								<label class="sr-only">Escolha o país da audição *</label>
-								<div class="input-field">
-				  					<div class="required_error_select-radio" id="audit_country_error"></div>
-			  					</div>
+							<div class="row">
+								<div class="input-field col s12 m6 l6 xl6">
+									<i class="material-icons prefix">today</i>
+									<input type="date" id="birthday_date" name="birthday_date" placeholder="Data de nascimento *" class="datepicker picker__input" required>
+									<label for="birthday_date" class="sr-only">Data de nascimento *</label>
+									<div class="input-field">
+										<div class="required_error" id="birthday_date_error"></div>
+									</div>
+								</div>
+								<div class="input-field col s12 m6 l6 xl6">											
+									<i class="material-icons prefix">perm_identity</i>
+									<label for="cgender" class="radio-label offset-m1 sr-only">Sexo *</label>
+									<div class="radio-box" id="radio-box">
+										<input type="radio" id="gender_male" name="cgender" class="with-gap validate"/>
+										<label name="cgender" for="gender_male">Masculino</label>
+										<input type="radio" id="gender_female" name="cgender"  class="with-gap"/>
+										<label name="cgender" for="gender_female">Feminino</label>
+										<input type="radio" id="gender_other" name="cgender" class="with-gap"/>
+										<label name="cgender" for="gender_other">Outro</label>
+									</div>
+									<div class="input-field">
+										<div class="required_error_select-radio" id="gender_error"></div>
+									</div>
+								</div>
 							</div>
-							<div class="input-field col s12 m6">
-								<i class="material-icons prefix">list</i>
-								<select name="audit_category" id="audit_category" multiple>
-									<option value="" disabled selected>Escolha a(s) categoria(s) para audição *</option>
-									<option value="1">Ator/Atriz</option>
-									<option value="2">Cantor(a)</option>
-									<option value="3">Dançarino(a)</option>
-									<option value="4">Modelo</option>
-								</select>
-								<label class="sr-only">Escolha a(s) categoria(s) para audição *</label>
-								<div class="input-field">
-				  					<div class="required_error_select-radio" id="audit_category_error"></div>
-			  					</div>
-							</div>							
-						</div>
-						<div class="row">
-							<div class="input-field col s12">
-								<i class="material-icons prefix">description</i>
-								<textarea type="text" id="complement" name="complement" class="materialize-textarea" placeholder="Aqui pode ser inserida uma descrição opcional"></textarea>
-								<label for="complement" data-error="A descrição ultrapassou o limite de caracteres permitido" class="sr-only">Descrição opcional</label>
+							<div class="row">
+								<div class="input-field col s12 m12 l6 xl6">
+									<i class="material-icons prefix">email</i>
+									<input type="email" id="email" name="email" placeholder="Email * (e.g. nome@provedor.com)">
+									<label for="email" class="sr-only">Email *</label>
+									<div class="input-field">
+										<div class="required_error" id="email_error"></div>
+									</div>
+								</div>
+								<div class="input-field col s12 m12 l6 xl6">
+									<i class="material-icons prefix">phone</i>
+									<input type="tel" id="telephone" name="telephone" placeholder="Telefone: +xx(xx)xxxxx-xxxx">
+									<label for="telephone" class="sr-only">Telefone</label>
+									<div class="input-field">
+										<div class="required_error" id="telephone_error"></div>
+									</div>
+								</div>
 							</div>
-						</div>						
-						<div class="row">
-							<div class="input-field col s11 offset-s1 m7 offset-m1">
-							<p class="notes">* Campo obrigatório</p><p class="notes">Após o envio dos dados, esses serão analisados por nossa equipe, que entrará em contato via e-mail agendando a data e local de sua audição de acordo com os dados informados.</p>
+							<div class="row">
+								<div class="input-field col s12 m12 l6 xl6">
+									<i class="material-icons prefix">list</i>
+									<select name="audit_category" id="audit_category" multiple>
+										<option value="" disabled selected>Escolha a(s) categoria(s) para audição *</option>
+										<option value="1">Ator/Atriz</option>
+										<option value="2">Cantor(a)</option>
+										<option value="3">Dançarino(a)</option>
+										<option value="4">Modelo</option>
+									</select>
+									<label class="sr-only">Escolha a(s) categoria(s) para audição *</label>
+									<div class="input-field">
+										<div class="required_error_select-radio" id="audit_category_error"></div>
+									</div>
+								</div>
+								<div class="input-field col s12 m12 l6 xl6">
+									<i class="material-icons prefix">location_on</i>
+									<select name="audit_country" id="audit_country" class="icons">
+										<option value="" disabled selected="selected">Escolha o país da audição *</option>
+										<option value="1" data-icon="images/countries/Brazil.png" class="circle">Brasil</option>
+										<option value="2" data-icon="images/countries/Canada.png" class="circle">Canadá</option>
+										<option value="3" data-icon="images/countries/China.png" class="circle">China</option>
+										<option value="4" data-icon="images/countries/South-Korea.png" class="circle">Coreia do Sul</option>
+										<option value="5" data-icon="images/countries/United-States.png" class="circle">Estados Unidos</option>
+										<option value="6" data-icon="images/countries/Thailand.png" class="circle">Tailândia</option>
+									</select>
+									<label class="sr-only">Escolha o país da audição *</label>
+									<div class="input-field">
+										<div class="required_error_select-radio" id="audit_country_error"></div>
+									</div>
+								</div>
 							</div>
-							<div class="input-field col s11 offset-s1 m3 offset-m1">
-								<button class="btn waves-effect waves-light" type="submit" id="submit" name="action" form="audit_register" formaction="#" formmethod="post">Enviar<i class="material-icons right">send</i>
-								</button>
+							<div class="row">
+								<div class="input-field col s12">
+									<i class="material-icons prefix">description</i>
+									<textarea type="text" id="complement" name="complement" class="materialize-textarea" placeholder="Aqui pode ser inserida uma descrição opcional"></textarea>
+									<label for="complement" data-error="A descrição ultrapassou o limite de caracteres permitido" class="sr-only">Descrição opcional</label>
+								</div>
+							</div>						
+							<div class="row">
+								<div class="input-field col s11 offset-s1 xl7 offset-xl1">
+								<p class="notes">* Campo obrigatório</p><p class="notes">Após o envio dos dados, esses serão analisados por nossa equipe, que entrará em contato via e-mail agendando a data e local de sua audição de acordo com os dados informados.</p>
+								</div>
+								<div class="input-field col s11 offset-s1 xl3 offset-xl1">
+									<button class="btn waves-effect waves-light" type="submit" id="submit" name="action" form="audit_register" formaction="#" formmethod="post">Enviar<i class="material-icons right">send</i>
+									</button>
+								</div>
 							</div>
-						</div>
-					</form>
-				</div>
+						</form>
+					</div>
+				</section>
             </div>
         </div>	
     </main>

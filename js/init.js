@@ -1,14 +1,12 @@
-// Inicialização do button-collapse e do parallax
-(function ($) {
-    $(function () {
-        $('.button-collapse').sideNav();
-        $('.parallax').parallax();
-    });
-})(jQuery);   
-
-// Inicialização dos selects
+// Inicializações
 $(document).ready(function() {
-		$('select').material_select();
+	$('select').material_select(); // Do material_select (para os selects)
+	$('.button-collapse').sideNav(); // Do sideNav (para o menu reduzido)
+	$('.parallax').parallax(); // Do parallax (para o conteúdo do segundo plano se mover em velocidade diferente do conteúdo do primeiro plano)
+	$('.materialboxed').materialbox(); // Do materialbox (para imagens serem aumentadas e reduzidas suavemente)
+	$('.carousel').carousel(); // Do carousel
+	$('.carousel.carousel-slider').carousel({fullWidth: true}); // Do carousel no modo slider
+	$('.collapsible').collapsible(); // Do collapsible
 });
 
 // Alterando as informações do datepicker para português
@@ -100,37 +98,6 @@ function checkDate() {
 }
 
 //Validação do sexo
-//function checkGender() {
-//  var state = true;
-//  $("input:radio.validate").each(function(){
-//    if($(this).attr('disabled') != 'disabled'){
-//      var my_parent = $(this).closest('.input-field');
-//      if(!$('[name='+$(this).attr('name')+']').is(':checked')){
-//        if($(my_parent).children('.warning').length < 1){
-//          $(this).parent().css("border","solid red 2px");
-//          $(this).parent().css("padding-top","1px");
-//          $('label[name='+$(this).attr('name')+']').css('top', '0.1rem');
-//          $(my_parent).append('<div class="col m12 s12 warning"><div style="color: #F44336; margin-top: 15px; margin-left:-10px; font-size: 0.8rem;">Preenchimento obrigatório</div></div>');
-//        }
-//		state = false
-//	  }
-//	else{
-//        if($(my_parent).find('.warning').length > 1){
-//          $(this).parent().removeAttr("style");
-//          $('label[name='+$(this).attr('name')+']').removeAttr('style');
-//          $(my_parent).find('.warning').remove()
-//		  state = true;
-//        }
-//      }
-//    }
-//  });
-//	return state;
-////  if(!bol_continue){
-////    e.preventDefault();
-////    return false;
-////  };
-//}
-
 function checkGender() {
   var state = true;
   $("input:radio.validate").each(function(){
@@ -283,65 +250,3 @@ $('#audit_category').change(function() {
 $('#complement').change(function() {
   checkComplement();
 })
-
-//function validateForm() {
-//	
-//	var first_and_mid_name = document.forms["audit_register"]["first_and_mid_name"].value;
-//    var last_name = document.forms["audit_register"]["last_name"].value;
-//	var email = document.forms["audit_register"]["email"].value;
-//	var telephone = document.forms["audit_register"]["telephone"].value;
-//	var audit_country = document.forms["audit_register"]["audit_country"].value;
-//	
-//	var pattLName = new RegExp("^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$");
-//	var pattPhone = new RegExp("[\+]\d{2}[\(]\d{2}[\)]\d{5}[\-]\d{4}");
-//	var pattEmail = new RegExp("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$");
-//	
-//	// Validação do nome
-//	if ((first_and_mid_name != "") && !(pattLName.test(first_and_mid_name))) {
-//		document.getElementById("first_and_mid_name_error").innerHTML = "Nome em formato inválido"; 
-//	}
-//	else if (first_and_mid_name == "") {
-//        document.getElementById("first_and_mid_name_error").innerHTML = "Preenchimento obrigatório";
-//    }
-//	else {
-//        document.getElementById("first_and_mid_name_error").innerHTML = "";
-//    }
-//	
-//	// Validação do sobrenome
-//	if ((last_name != "") && !(pattLName.test(last_name))) {
-//		document.getElementById("last_name_error").innerHTML = "Sobrenome em formato inválido"; 
-//	}
-//	else if (last_name == "") {
-//		document.getElementById("last_name_error").innerHTML = "Preenchimento obrigatório";
-//    }
-//	else {
-//        document.getElementById("last_name_error").innerHTML = "";
-//    }
-//	
-//	// Validação do email
-//	if ((email != "") && !(pattEmail.test(email))) {
-//		document.getElementById("email_error").innerHTML = "Email em formato inválido"; 
-//	}
-//	else if (email == "") {
-//        document.getElementById("email_error").innerHTML = "Preenchimento obrigatório";
-//    }
-//	else {
-//        document.getElementById("email_error").innerHTML = "";
-//    }
-//	
-//	// Validação do telefone
-//	if ((telephone != "") && !(pattPhone.test(telephone))) {
-//		document.getElementById("telephone_error").innerHTML = "Telefone em formato inválido"; 
-//	}
-//	else {
-//        document.getElementById("telephone_error").innerHTML = "";
-//    }
-//	
-//	// Validação do select de país
-//	if (audit_country == "") {
-//        document.getElementById("audit_country_error").innerHTML = "Preenchimento obrigatório";
-//    }
-//	else {
-//        document.getElementById("audit_country_error").innerHTML = "";
-//    }
-//}

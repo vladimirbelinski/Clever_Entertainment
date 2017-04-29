@@ -5,6 +5,11 @@ nav .brand-logo {
     color: #444;
 }
 
+.my_breadcrumbs {
+	height:30px;
+	line-height: 30px;
+}
+
 p {
     line-height: 2rem;
 }

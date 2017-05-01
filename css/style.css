@@ -1,8 +1,18 @@
 /* Customizações gerais das páginas */
+.artists {
+	max-height: 190px;
+	min-height: 190px;
+	max-width: 100%;
+	overflow: hidden;
+}
 
 nav ul a,
 nav .brand-logo {
     color: #444;
+}
+
+.breadcrumb {
+	margin-left: 20px;
 }
 
 .my_breadcrumbs {
@@ -85,6 +95,10 @@ p.notes {
 	left: 344px;
 	width: 112px;
 	height: 112px;
+}
+
+.tap-target-data {
+	margin-left: 60px;
 }
 
 .fixed-action-btn {

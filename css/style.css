@@ -148,12 +148,14 @@ picture.parallax {
 	color: #F44336;
 	font-size: 0.8rem;
 	margin-top: -28px;
+	margin-left: 42px;
 }
 
 .required_error_select-radio {
 	color: #F44336;
 	font-size: 0.8rem;
 	margin-top: 10px;
+	margin-left: 42px;
 }
 
 /* Classes tomadas do Bootstrap */

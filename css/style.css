@@ -47,6 +47,22 @@ figcaption {
     font-size: inherit;
 }
 
+.containerMap {
+	overflow: hidden;
+	max-width: 100%;
+	position: relative;
+	padding-bottom: 58.25%;
+	height: 0;
+	margin-bottom: 30px;
+}
+.containerMap iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
 footer.page-footer {
     margin: 0;
 }
@@ -70,6 +86,17 @@ p.notes {
 
 .card-content {
   margin-top: 17xpx;
+}
+
+#info_collapsible {
+	margin-top: 25px;
+}
+
+/* Carousel */
+.carousel {
+	margin-top: 30px;
+	height: 200px;
+	perspective: 100px;
 }
 
 /* Tap target*/

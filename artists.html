@@ -22,7 +22,7 @@
 	<!-- Cabeçalho da página -->
     <header>
 		<!-- Menu de navegação: faz uso do componente Navbar e do componente JS SideNav -->
-		<nav class="white" role="navigation">
+		<nav class="white hiddenprint" role="navigation">
 			<div class="nav-wrapper container">
 				<!-- Logo do menu: para telas de tamanho >= a 600px é carregada uma imagem maior. Para telas de tamanho inferior é carregada uma imagem menor. Isso faz com que em dispositivos móveis, por exemplo, seja carregada uma imagem mais leve  -->
 				<a id="logo-container" href="index.html" class="brand-logo">
@@ -32,7 +32,7 @@
 						<img src="images/logo.jpg" alt="Clever Entertainment Logo" style="width:auto">
 					</picture>
 				</a>
-				<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+				<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons hiddenprint">menu</i></a>
 				<!-- Itens do menu normal -->
 				<ul class="right hide-on-med-and-down">
 					<li><a href="index.html">Home</a></li>
@@ -69,7 +69,7 @@
 					<!-- Título informativo da página com ícone -->
 					<div class="row">
 						<div class="col s12">
-							<h5 class="grey-text text-darken-4"><i class="material-icons">grade</i> ARTISTAS</h5>
+							<h5 class="grey-text text-darken-4"><i class="material-icons hiddenprint">grade</i> ARTISTAS</h5>
 						</div>
 					</div>
 					<!-- Aqui são encontrados os cards com informações sobre os artistas da empresa. Os comentários do primeiro card se aplicam aos demais, pois são análogos -->
@@ -217,8 +217,8 @@
         <div class="container">
             <div class="row">
 				<!-- Logo da empresa -->
-                <div class="col s12 m5 center">
-                    <picture class="hiddenprint">
+                <div class="col s12 m5 center hiddenprint">
+                    <picture>
 						<source media="(min-width: 992px)" srcset="images/logo.jpg">
 						<source media="(min-width: 200px)" srcset="images/logoSmall.jpg">
 						<img src="images/logo.jpg" alt="Clever Entertainment Logo" style="width:auto">
@@ -230,7 +230,7 @@
                     <p class="white-text">+55(49)3333-3333 contact@clever.com</p>
                 </div>
 				<!-- Links para outras mídias da empresa -->
-                <div class="col s5 offset-s1 m3">
+                <div class="col s5 offset-s1 m3 hiddenprint">
                     <h5 class="white-text">Nos siga</h5>
                     <a href="https://open.spotify.com/user/vladimirbelinski">
 						<picture class="hiddenprint">

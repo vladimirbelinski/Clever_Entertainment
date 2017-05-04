@@ -202,11 +202,24 @@ picture.parallax {
 	margin-left: 44px;
 }
 
-/* Classe para não mostrar elementos na impressão */
 @media print {
-  .hiddenprint {
-    display: none !important;
-  }
+	/* Classe para não mostrar elementos na impressão */
+	.hiddenprint {
+		display: none !important;
+	}
+	/* Algumas modificações para diminuir o espaço dos elementos na impressão */
+	.card-content {
+		max-height: 120px;
+		padding: 0;
+	}
+	.card-action {
+		height: 50px;
+	}
+	* {
+		padding: 0;
+		margin: 0;
+		border: none;
+	}
 }
 
 /* Classes tomadas do Bootstrap */

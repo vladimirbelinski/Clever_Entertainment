@@ -22,7 +22,7 @@
 	<!-- Cabeçalho da página -->
     <header>
 		<!-- Menu de navegação: faz uso do componente Navbar e do componente JS SideNav -->
-		<nav class="white" role="navigation">
+		<nav class="white hiddenprint" role="navigation">
 			<div class="nav-wrapper container">
 				<!-- Logo do menu: para telas de tamanho >= a 600px é carregada uma imagem maior. Para telas de tamanho inferior é carregada uma imagem menor. Isso faz com que em dispositivos móveis, por exemplo, seja carregada uma imagem mais leve  -->
 				<a id="logo-container" href="index.html" class="brand-logo">
@@ -32,7 +32,7 @@
 						<img src="images/logo.jpg" alt="Clever Entertainment Logo" style="width:auto">
 					</picture>
 				</a>
-				<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+				<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons hiddenprint">menu</i></a>
 				<!-- Itens do menu normal -->
 				<ul class="right hide-on-med-and-down">
 					<li><a href="index.html">Home</a></li>
@@ -69,43 +69,43 @@
 					<!-- Título informativo da página com ícone -->
 					<div class="row">
 						<div class="col s12">
-							<h5 class="grey-text text-darken-4"><i class="material-icons">info_outline</i> SOBRE CLEVER</h5>
+							<h5 class="grey-text text-darken-4"><i class="material-icons hiddenprint">info_outline</i> SOBRE CLEVER</h5>
 						</div>
 					</div>
 					<div class="row">
 						<!-- Nessa div é feito uso do componente JS Collapsible, utilizado para os grupos de informações gerais da empresa. Como está sendo utilizado o tipo 'accordion' somente um grupo de informações pode ficar aberto por vez. Se 'accordion' for substituído pelo tipo 'expandable' vários grupos podem ficar abertos ao mesmo tempo -->
 						<div class="col s12 xl6">
-							<h5><i class="material-icons">info</i> Informações Gerais</h5>
+							<h5><i class="material-icons hiddenprint">info</i> Informações Gerais</h5>
 							<ul class="collapsible popout" data-collapsible="accordion" id="info_collapsible">
 								<li>
 									<!-- Cabeçalho de um item da lista -->
-									<div class="collapsible-header"><i class="material-icons">person_pin</i>Onde estamos</div>
+									<div class="collapsible-header"><i class="material-icons hiddenprint">person_pin</i>Onde estamos</div>
 									<!-- Conteúdo de um item da lista. -->
 									<div class="collapsible-body"><p>A Clever Entertainment está presente em seis países: Brasil (sede), Canadá, China, Coreia do Sul, Estados Unidos e Tailândia.</p></div>
 								</li>
 								<li>
-									<div class="collapsible-header active"><i class="material-icons">perm_identity</i>Quem somos</div>
+									<div class="collapsible-header active"><i class="material-icons hiddenprint">perm_identity</i>Quem somos</div>
 									<div class="collapsible-body"><p>A Clever Entertainment é uma empresa de entretenimento criada em 2012 e atualmente sediada no Brasil, possuindo também filiais no Canadá, China, Coreia do Sul, Estados Unidos e Tailândia. A Clever Entertainment opera como uma gravadora, agência de talentos, empresa de produção musical, gestão de eventos, empresa de produção de shows e editora de música.</p></div>
 								</li>
 								<li>
-									<div class="collapsible-header"><i class="material-icons">star</i>Artistas</div>
+									<div class="collapsible-header"><i class="material-icons hiddenprint">star</i>Artistas</div>
 									<!-- No conteúdo desse item da lista também é feito uso do componente 'badge' -->
 									<div class="collapsible-body"><p>A Clever Entertainment trabalha com artistas nas seguintes categorias: ator/atriz, cantor(a), dançarino(a) e modelo. Ademais, também é responsável pela formação de grupos. Os artistas da Clever Entertainment são denominados coletivamente como Clever Cosmos.<a href="artists.html"><span class="new badge" data-badge-caption="Ver artistas"></span></a></p></div>
 								</li>
 								<li>
-									<div class="collapsible-header"><i class="material-icons">work</i>Processo de audições</div>
+									<div class="collapsible-header"><i class="material-icons hiddenprint">work</i>Processo de audições</div>
 									<!-- No conteúdo desse item da lista também é feito uso do componente 'badge' -->
 									<div class="collapsible-body"><p>A Clever Entertainment realiza constantemente audições nos seguintes países: Brasil, Canadá, China, Coreia do Sul, Estados Unidos e Tailândia. Se você sempre sonhou em ser um Clever Artist, agende já sua audição!<a href="audit.html"><span class="new badge" data-badge-caption="Agendar audição"></span></a></p></div>
 								</li>
 								<li>
-									<div class="collapsible-header"><i class="material-icons">chat_bubble_outline</i>Contate-nos</div>
+									<div class="collapsible-header"><i class="material-icons hiddenprint">chat_bubble_outline</i>Contate-nos</div>
 									<div class="collapsible-body"><p>Possui alguma dúvida, sugestão ou comentário? Contate-nos através de +55(49)3333-3333 ou contact@clever.com.</p></div>
 								</li>
 							</ul>
 						</div>
 						<!-- div onde se encontra embutido um mapa do Google Maps (localização da empresa fictícia) -->
 						<div class="col s12 m5 offset-m1 hiddenprint">
-							<h5><i class="material-icons">person_pin</i> Clever Entertainment no Brasil</h5>
+							<h5><i class="material-icons hiddenprint">person_pin</i> Clever Entertainment no Brasil</h5>
 							<figure>
 								<div class="containerMap">
 									<iframe width="425" height="350" frameborder= 0 scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3551.3229983696533!2d-52.70958048518949!3d-27.114634683041082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94fb4b2bbbd96a4b%3A0x5871f4d6809cb67e!2sUniversidade+Federal+da+Fronteira+Sul%2C+Campus+Chapec%C3%B3!5e0!3m2!1spt-BR!2sbr!4v1492001227348"></iframe>
@@ -115,7 +115,7 @@
 						</div>
 						<!-- div onde são encontradas as logos de parceiros da empresa -->
 						<div class="col s12 m5 offset-m1 hiddenprint">
-							<h5><i class="material-icons">business</i> Parceiros</h5>
+							<h5><i class="material-icons hiddenprint">business</i> Parceiros</h5>
 							<!-- Aqui é feito uso do componente JS Carousel, um componente que apresenta um comportamento diferenciado de um slider de imagens -->
 							<div class="carousel">
 								<a class="carousel-item" href="http://www.genie.co.kr/!"><img src="images/about/genie.png" alt="Logo Genie"></a>
@@ -138,8 +138,8 @@
         <div class="container">
             <div class="row">
 				<!-- Logo da empresa -->
-                <div class="col s12 m5 center">
-                    <picture class="hiddenprint">
+                <div class="col s12 m5 center hiddenprint">
+                    <picture>
 						<source media="(min-width: 992px)" srcset="images/logo.jpg">
 						<source media="(min-width: 200px)" srcset="images/logoSmall.jpg">
 						<img src="images/logo.jpg" alt="Clever Entertainment Logo" style="width:auto">
@@ -151,7 +151,7 @@
                     <p class="white-text">+55(49)3333-3333 contact@clever.com</p>
                 </div>
 				<!-- Links para outras mídias da empresa -->
-                <div class="col s5 offset-s1 m3">
+                <div class="col s5 offset-s1 m3 hiddenprint">
                     <h5 class="white-text">Nos siga</h5>
                     <a href="https://open.spotify.com/user/vladimirbelinski">
 						<picture class="hiddenprint">

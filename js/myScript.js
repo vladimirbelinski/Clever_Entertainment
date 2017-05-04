@@ -1,3 +1,10 @@
+/* Arquivo: myScript.js
+   Autor: Vladimir Belinski
+   Descrição: o presente arquivo faz parte da resolução do primeiro trabalho do CCR Tópicos Especiais em Desenvolvimento Web,
+   			  CC-UFFS 2017.1, ministrado pela professora Ma. Andressa Sebben. Nele podem ser encontradas as funções (Javascrip/ 
+   			  jQuery) implementadas e as inicializações de componentes JS do Materialize.
+*/
+
 $(document).ready(function() {
 	
 	// Inicialização do parallax (para o conteúdo do segundo plano se mover em velocidade diferente do conteúdo do primeiro plano)
@@ -12,11 +19,11 @@ $(document).ready(function() {
 	// Inicialização do sideNav (para o menu reduzido)
 	$('.button-collapse').sideNav();
 	
-	// Inicialização do carousel
-	$('.carousel').carousel();
-	
 	// Inicialização do collapsible
 	$('.collapsible').collapsible();
+	
+	// Inicialização do carousel (utilizado em 'about.html' para as logos de parceiros)
+	$('.carousel').carousel();
 	
 	// Alterando as informações do datepicker para português
 	$('.datepicker').pickadate({
@@ -209,7 +216,7 @@ $(document).ready(function() {
 		return true;
 	}
 
-	// Quando o formulário com id == audit_register é enviado são realizadas as verificações
+	// Quando o formulário com id == audit_register é enviado, são realizadas as verificações
 	$('#audit_register').submit(function() {
 	  var name = checkName();
 	  var lastname = checkLastName();

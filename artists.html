@@ -1,7 +1,8 @@
 <!-- Arquivo: artists.html
 	 Autor: Vladimir Belinski 
-	 Descrição: o presente arquivo consiste no arquivo (.html) de audições do primeiro trabalho do CCR Tópicos Especiais em
-				Desenvolvimento Web, CC-UFFS 2017.1, ministrado pela professora Ma. Andressa Sebben
+	 Descrição: o presente arquivo faz parte da resolução do primeiro trabalho do CCR Tópicos Especiais em Desenvolvimento Web,
+	 			CC-UFFS 2017.1, ministrado pela professora Ma. Andressa Sebben. Nele, é desenvolvida a seção de artistas da empresa,
+				a qual contém imagens dos artistas, com seus respectivos nomes e atividades que exercem.
 -->
 
 <!DOCTYPE html>
@@ -14,66 +15,77 @@
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection,print"/>
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection,print"/>
+    <link href="css/myStyles.css" type="text/css" rel="stylesheet" media="screen,projection,print"/>
 </head>
     
 <body>
-    
-    <nav class="white" role="navigation">
-        <div class="nav-wrapper container">
-            <a id="logo-container" href="index.html" class="brand-logo">
-				<picture class="hiddenprint">
-					<source media="(min-width: 600px)" srcset="images/logoB.jpg">
-					<source media="(min-width: 200px)" srcset="images/logoBSmall.jpg">
-					<img src="images/logo.jpg" alt="Clever Entertainment Logo" style="width:auto">
-				</picture>
-			</a>
-            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">Sobre Clever</a></li>
-				<li><a href="artists.html">Artistas</a></li>
-                <li><a href="news.html">Notícias</a></li>
-                <li><a href="audit.html">Audições</a></li>
-            </ul>
-            <ul class="side-nav" id="nav-mobile" >
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">Sobre Clever</a></li>
-                <li><a href="artists.html">Artistas</a></li>
-                <li><a href="news.html">Notícias</a></li>
-                <li><a href="audit.html">Audições</a></li>
-            </ul>
-        </div>
-    </nav>
-	<nav class="my_breadcrumbs" role="navigation">
-		<div class="nav-wrapper">
-			<div class="col s12 teal lighten-2">
-				<a href="index.html" class="breadcrumb">Home</a>
-				<a class="breadcrumb">Artistas</a>
+	<!-- Cabeçalho da página -->
+    <header>
+		<!-- Menu de navegação: faz uso do componente Navbar e do componente JS SideNav -->
+		<nav class="white" role="navigation">
+			<div class="nav-wrapper container">
+				<!-- Logo do menu: para telas de tamanho >= a 600px é carregada uma imagem maior. Para telas de tamanho inferior é carregada uma imagem menor. Isso faz com que em dispositivos móveis, por exemplo, seja carregada uma imagem mais leve  -->
+				<a id="logo-container" href="index.html" class="brand-logo">
+					<picture class="hiddenprint">
+						<source media="(min-width: 600px)" srcset="images/logoB.jpg">
+						<source media="(min-width: 200px)" srcset="images/logoBSmall.jpg">
+						<img src="images/logo.jpg" alt="Clever Entertainment Logo" style="width:auto">
+					</picture>
+				</a>
+				<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+				<!-- Itens do menu normal -->
+				<ul class="right hide-on-med-and-down">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">Sobre Clever</a></li>
+					<li><a href="artists.html">Artistas</a></li>
+					<li><a href="news.html">Notícias</a></li>
+					<li><a href="audit.html">Audições</a></li>
+				</ul>
+				<!-- Itens do menu lateral -->
+				<ul class="side-nav" id="nav-mobile" >
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">Sobre Clever</a></li>
+					<li><a href="artists.html">Artistas</a></li>
+					<li><a href="news.html">Notícias</a></li>
+					<li><a href="audit.html">Audições</a></li>
+				</ul>
 			</div>
-		</div>
-	</nav>
+		</nav>
+		<!-- Breadcrumbs -->
+		<nav class="my_breadcrumbs" role="navigation">
+			<div class="nav-wrapper">
+				<div class="col s12 teal lighten-2">
+					<a href="index.html" class="breadcrumb">Home</a>
+					<a class="breadcrumb">Artistas</a>
+				</div>
+			</div>
+		</nav>
+	</header>
 	
 	<main>
 		<div class="container">
 			<div class="section">
 				<section>
+					<!-- Título informativo da página com ícone -->
 					<div class="row">
 						<div class="col s12">
-							<div class="icon-block">
-								<h5 class="grey-text text-darken-4"><i class="material-icons">grade</i> ARTISTAS</h5>
-							</div>
+							<h5 class="grey-text text-darken-4"><i class="material-icons">grade</i> ARTISTAS</h5>
 						</div>
 					</div>
+					<!-- Aqui são encontrados os cards com informações sobre os artistas da empresa. Os comentários do primeiro card se aplicam aos demais, pois são análogos -->
 					<div class="row">
 						<div class="col s12 m6 xl4">
+							<!-- Aqui é feito uso de um card, um componente do Materialize que apresenta uma maneira conveniente de exibir conteúdos compostos por diferentes tipos de objetos -->
 							<div class="card">
+								<!-- div correspondente à imagem do card. Aqui também é feito uso do componente JS 'Material Box' que permite ampliar e reduzir um imagem de maneira suave -->
 								<div class="card-image artists hiddenprint">
 									<img class="materialboxed" data-caption="BLACKPINK" src="images/artists/blackpink.jpg" alt="BLACKPINK">
 								</div>
+								<!-- div correspondente ao conteúdo do card -->
 								<div class="card-content">
 									<h5>BLACKPINK</h5>
 								</div>
+								<!-- Nesta div poderiam ter sido utilizados links relacionados ao card. Preferiu-se fazer uso de outro componente do Materialize, os 'chips', que representam pequenos blocos de informação que podem representar contatos, marcadores, etc -->
 								<div class="card-action">
 									<div class="chip">Grupo feminino</div>
 									<div class="chip">K-pop</div>			
@@ -200,9 +212,11 @@
 		</div>
 	</main>
 	
-	<footer class="page-footer grey darken-4">
+	<!-- Rodapé da página: faz uso do componente footer do Materialize. As imagens do rodapé são carregadas de forma diferente de acordo com o tamanho da tela do dispositivo, o que faz, por exemplo, que para dispositivos móveis sejam carregadas imagens mais leves -->
+    <footer class="page-footer grey darken-4">
         <div class="container">
             <div class="row">
+				<!-- Logo da empresa -->
                 <div class="col s12 m5 center">
                     <picture class="hiddenprint">
 						<source media="(min-width: 992px)" srcset="images/logo.jpg">
@@ -210,10 +224,12 @@
 						<img src="images/logo.jpg" alt="Clever Entertainment Logo" style="width:auto">
 					</picture>
                 </div>
+				<!-- Contato da empresa -->
                 <div class="col s5 offset-s1 m3 offset-m1">
                     <h5 class="white-text">Contato</h5>
-                    <p class="white-text">+55(49)3333-3333</p>
+                    <p class="white-text">+55(49)3333-3333 contact@clever.com</p>
                 </div>
+				<!-- Links para outras mídias da empresa -->
                 <div class="col s5 offset-s1 m3">
                     <h5 class="white-text">Nos siga</h5>
                     <a href="https://open.spotify.com/user/vladimirbelinski">
@@ -240,6 +256,7 @@
                 </div>
             </div>
         </div>
+		<!-- Div de direitos autorais-->
         <div class="footer-copyright grey darken-4">
             <div class="container">
                 Copyright © 2017 CLEVER ENTERTAINMENT, TODOS OS DIREITOS RESERVADOS.

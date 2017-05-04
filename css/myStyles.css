@@ -1,66 +1,35 @@
-/* Customizações gerais das páginas */
-.artists {
-	max-height: 190px;
-	min-height: 190px;
-	max-width: 100%;
-	overflow: hidden;
-}
+/* Arquivo: myStyles.css
+   Autor: Vladimir Belinski
+   Descrição: o presente arquivo faz parte da resolução do primeiro trabalho do CCR Tópicos Especiais em Desenvolvimento Web,
+   			  CC-UFFS 2017.1, ministrado pela professora Ma. Andressa Sebben. Nele podem ser encontradas as customizações de
+			  estilo realizadas nos elementos (tags, classes, divs, etc) utilizados no trabalho.
+*/
 
+/* Customização do menu de navegação */
 nav ul a,
 nav .brand-logo {
     color: #444;
 }
 
+/* Customização do botão de menu colapsado */
+.button-collapse {
+    color: #26a69a;
+}
+
+/* Customização de um breadcrumb */
 .breadcrumb {
 	margin-left: 20px;
 }
 
+/* Customização da div onde se encontram os breadcrumbs*/
 .my_breadcrumbs {
 	height:25px;
 	line-height: 25px;
 }
 
+/* Customização dos parágrafos (tag <p> e <p> com classe notes) */
 p {
     line-height: 2rem;
-}
-
-.button-collapse {
-    color: #26a69a;
-}
-
-figure {
-    width: 100%;
-    margin: 0;
-    padding-top: 1em;
-}
-
-figcaption {
-    font: 120%;
-    text-align: center;
-}
-
-.icon-block {
-    padding: 0 15px;
-}
-
-.icon-block .material-icons {
-    font-size: inherit;
-}
-
-footer.page-footer {
-    margin: 0;
-}
-
-.radio-label {
-  color: #9e9e9e;
-  position: absolute;
-  top: -0.9rem;
-  left: 3.8rem;
-  font-size: 0.8rem;
-}
-
-.radio-box {
-	margin-left: 2.0rem;
 }
 
 p.notes {
@@ -68,15 +37,57 @@ p.notes {
 	font-size: 0.8rem;
 }
 
-.card-content {
-  margin-top: 17xpx;
+/* Customização de bloco de texto com ícone ('index.html') */
+.icon-block {
+    padding: 0 15px;
 }
 
+/* Customização de ícones */
+.icon-block .material-icons {
+    font-size: inherit;
+}
+
+/* Customização do rodapé da página */
+footer.page-footer {
+    margin: 0;
+}
+
+/* Customização da tag <figure> */
+figure {
+    width: 100%;
+    margin: 0;
+    margin-top: 17px;
+}
+
+/* Customização da tag <figcaption> */
+figcaption {
+    text-align: center;
+	padding-bottom: 10px;
+}
+
+/* Customização da div de inputs do tipo radio ('audit.html') */
+.radio-box {
+	margin-left: 32px;
+}
+
+/* Customização das imagens dos cards dos artistas ('artists.html') */
+.artists {
+	height: 190px;
+	max-width: 100%;
+	overflow: hidden;
+}
+
+/* Customização do conteúdo dos cards de notícias ('news.html') */
+.news {
+	height: 200px;
+}
+
+/* Customização da div de conteúdo do collapsible da página 'about.html' */
 #info_collapsible {
-	margin-top: 25px;
+	margin-top: 17px;
 }
 
-/* Mapa */
+/* Customizações do mapa ('about.html') */
 .containerMap {
 	overflow: hidden;
 	max-width: 100%;
@@ -85,6 +96,7 @@ p.notes {
 	height: 0;
 	margin-bottom: 30px;
 }
+
 .containerMap iframe {
 	position: absolute;
 	top: 0;
@@ -93,7 +105,7 @@ p.notes {
 	height: 100%;
 }
 
-/* Carousel */
+/* Customizações do carousel ('about.html') */
 .carousel {
   height: 150px;
 	margin-bottom: 25px;
@@ -104,7 +116,7 @@ p.notes {
   height: 0;
 }
 
-/* Tap target*/
+/* Customizações do tap target ('news.html') */
 .tap-target-wrapper {
 	right: -348px;
 	bottom: -327px;
@@ -138,7 +150,7 @@ p.notes {
 	right: 24px;
 }
 
-/* Parllax */
+/* Customizações do parallax ('index.html') */
 picture.parallax {
     position: absolute;
     top: 0;
@@ -175,19 +187,26 @@ picture.parallax {
     }
 }
 
-/* Formatação das verificações e erros*/
+/* Customização das verificações e erros ('audit.html')*/
 .required_error {
 	color: #F44336;
 	font-size: 0.8rem;
-	margin-top: -28px;
-	margin-left: 42px;
+	margin-top: -18px;
+	margin-left: 44px;
 }
 
-.required_error_select-radio {
+.required_error_radio {
 	color: #F44336;
 	font-size: 0.8rem;
 	margin-top: 10px;
-	margin-left: 42px;
+	margin-left: 44px;
+}
+
+/* Classe para não mostrar elementos na impressão */
+@media print {
+  .hiddenprint {
+    display: none !important;
+  }
 }
 
 /* Classes tomadas do Bootstrap */
@@ -200,22 +219,4 @@ picture.parallax {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
-}
-.sr-only-focusable:active,
-.sr-only-focusable:focus {
-  position: static;
-  width: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  clip: auto;
-}
-.has-feedback label.sr-only ~ .form-control-feedback {
-  top: 0;
-}
-
-@media print {
-  .hiddenprint {
-    display: none !important;
-  }
 }

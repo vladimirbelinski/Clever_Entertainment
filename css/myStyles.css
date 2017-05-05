@@ -202,6 +202,12 @@ picture.parallax {
 	margin-left: 44px;
 }
 
+/* Classe para esconder o rodapé (usada nas páginas onde é feito uso do handlebars - estratégia para não aparecer o rodapé até que a div de conteúdo tenha sido preenchida) */
+.hiddenfooter{
+	display: none !important;
+}
+
+/* Customizações do modo de impressão */
 @media print {
 	/* Classe para não mostrar elementos na impressão */
 	.hiddenprint {

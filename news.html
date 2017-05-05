@@ -14,7 +14,7 @@
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection,print"/>
-    <link href="css/myStyles.css" type="text/css" rel="stylesheet" media="screen,projection,print"/>
+    <link href="css/myStyles.css" type="text/css" rel="stylesheet" media="screen,projection,print"/> 
 </head>
     
 <body>
@@ -88,121 +88,38 @@
 							</div>
 						</div>
 					</div>
-					<!-- Aqui são encontrados os cards com notícias. Os comentários do primeiro card se aplicam aos demais, pois são análogos -->
+					<!-- Aqui são encontrados os cards com notícias. É feito uso de um template e da biblioteca handlebars de forma que não seja necessário replicar o código html comum a cada card. O conteúdo dos cards pode ser encontrado em 'js/newsContent.js' -->
 					<div class="row">
-						<div class="col s12 m6 xl4">
-							<!-- Aqui é feito uso de um card, um componente do Materialize que apresenta uma maneira conveniente de exibir conteúdos compostos por diferentes tipos de objetos. Ademais, também é utilizada a classe hoverable, que faz com que o card receba um sombreamento ao ser passado o mouse sobre ele -->
-							<div class="card hoverable">
-								<!-- div correspondente à imagem do card. Ao clicar na imagem é feito uso de 'waves', uma biblioteca externa incluída no Materialize que permite criar o efeito de tinta do Material Design -->
-								<div class="card-image waves-effect waves-block waves-light hiddenprint">
-									<img class="activator" src="images/news/produce101.jpg" alt="Produce 101">
-								</div>
-								<!-- div correspondente ao conteúdo externo do card -->
-								<div class="card-content news">
-									<span class="card-title activator grey-text text-darken-4">PRODUCE 101<i class="material-icons hiddenprint right">more_vert</i></span>
-									<p class="light">[05/04/2017]</p>
-									<p><strong>Clever Entertainment terá trainee participando do Produce 101</strong></p>
-								</div>
-								<!-- div correspondente ao conteúdo interno do card. Ao ser clicado na imagem ou ativador da notícia é apresentada essa div contendo uma versão mais completa da notícia -->
-								<div class="card-reveal">
-									<span class="card-title grey-text text-darken-4">PRODUCE 101<i class="material-icons hiddenprint right">close</i></span>
-									<p class="light">[05/04/2017]</p>
-									<p><strong>Clever Entertainment terá trainee participando do Produce 101</strong></p>
-									<p>Em breve iniciará a segunda temporada de Produce 101, este ano com 101 trainess meninos disputando 11 vagas em um novo grupo. Na disputa estará também o trainee Ong Seong Woo da Clever Entertainment. O primeiro episódio será televisionado dia 07 de abril pela Mnet. Mostre apoio a nosso trainee!</p>
-								</div>
-							</div>
-						</div>
-						<div class="col s12 m6 xl4">						
-							<div class="card hoverable">
-								<div class="card-image waves-effect waves-block waves-light hiddenprint">
-									<img class="activator" src="images/news/monstax-beautiful.jpg" alt="Monsta X">
-								</div>
-								<div class="card-content news">
-									<span class="card-title activator grey-text text-darken-4">Monsta X<i class="material-icons hiddenprint right">more_vert</i></span>
-									<p class="light">[21/03/2017]</p>
-									<p><strong>Monsta X lança seu novo álbum: THE CLAN pt.2.5 [BEAUTIFUL]</strong></p>
-								</div>
-								<div class="card-reveal">
-									<span class="card-title grey-text text-darken-4">Monsta X<i class="material-icons hiddenprint right">close</i></span>
-									<p class="light">[21/03/2017]</p>
-									<p><strong>Monsta X lança seu novo álbum: THE CLAN pt.2.5 [BEAUTIFUL]</strong></p>
-									<p>Contendo 8 faixas, THE CLAN pt.2.5 [BEAUTIFUL] é o sexto álbum do grupo.</p>
+						<!-- Incício do template -->
+						<script id="newsTemplate" type="text/x-handlebars-template">
+							{{#each input}}
+							<div class="col s12 m6 xl4">
+								<!-- Aqui é feito uso de um card, um componente do Materialize que apresenta uma maneira conveniente de exibir conteúdos compostos por diferentes tipos de objetos. Ademais, também é utilizada a classe hoverable, que faz com que o card receba um sombreamento ao ser passado o mouse sobre ele -->
+								<div class="card hoverable">
+									<!-- div correspondente à imagem do card. Ao clicar na imagem é feito uso de 'waves', uma biblioteca externa incluída no Materialize que permite criar o efeito de tinta do Material Design -->
+									<div class="card-image waves-effect waves-block waves-light hiddenprint">
+										<img class="activator" src="{{imageSrc}}" alt="{{altDescr}}">
+									</div>
+									<!-- div correspondente ao conteúdo externo do card -->
+									<div class="card-content news">
+										<span class="card-title activator grey-text text-darken-4">{{cardTitle}}<i class="material-icons hiddenprint right">more_vert</i></span>
+										<p class="light">{{newsDate}}</p>
+										<p><strong>{{newsTitle}}</strong></p>
+									</div>
+									<!-- div correspondente ao conteúdo interno do card. Ao ser clicado na imagem ou ativador da notícia é apresentada essa div contendo uma versão mais completa da notícia -->
+									<div class="card-reveal">
+										<span class="card-title grey-text text-darken-4">{{cardTitle}}<i class="material-icons hiddenprint right">close</i></span>
+										<p class="light">{{newsDate}}</p>
+										<p><strong>{{newsTitle}}</strong></p>
+										<p>{{newsContent}}</p>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col s12 m6 xl4">						
-							<div class="card hoverable">
-								<div class="card-image waves-effect waves-block waves-light hiddenprint">
-									<img class="activator" src="images/news/bts.jpg" alt="BTS">
-								</div>
-								<div class="card-content news">
-									<span class="card-title activator grey-text text-darken-4">BTS<i class="material-icons hiddenprint right">more_vert</i></span>
-									<p class="light">[23/02/2017]</p>
-									<p><strong>BTS participa do primeiro episódio do New Yang Nam Show</strong></p>
-								</div>
-								<div class="card-reveal">
-									<span class="card-title grey-text text-darken-4">BTS<i class="material-icons hiddenprint right">close</i></span>
-									<p class="light">[23/02/2017]</p>
-									<p><strong>BTS participa do primeiro episódio do New Yang Nam Show</strong></p>
-									<p>Os integrantes do grupo foram os primeiros convidados desta temporada do show. No episódio, conversaram e participaram de brincadeiras juntamente com os hosts Yang Se-hyeong e Eric Nam.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col s12 m6 xl4">						
-							<div class="card hoverable">
-								<div class="card-image waves-effect waves-block waves-light hiddenprint">
-									<img class="activator" src="images/news/mark.jpg" alt="NCT Mark">
-								</div>
-								<div class="card-content news">
-									<span class="card-title activator grey-text text-darken-4">NCT<i class="material-icons hiddenprint right">more_vert</i></span>
-									<p class="light">[08/02/2017]</p>
-									<p><strong>Mark, do NCT, participará da segunda temporada do High School Rapper</strong></p>
-								</div>
-								<div class="card-reveal">
-									<span class="card-title grey-text text-darken-4">NCT<i class="material-icons hiddenprint right">close</i></span>
-									<p class="light">[08/02/2017]</p>
-									<p><strong>Mark, do NCT, participará da segunda temporada do High School Rapper</strong></p>
-									<p>O integrante do grupo NCT, Mark Lee, estará participando da segunda temporada do High School Rapper, que iniciará a ser televisionada no dia 10 de fevereiro pela Mnet. Estamos na torcida por ele!</p>
-								</div>
-							</div>
-						</div>
-						<div class="col s12 m6 xl4">						
-							<div class="card hoverable">
-								<div class="card-image waves-effect waves-block waves-light hiddenprint">
-									<img class="activator" src="images/news/blackpink.jpg" alt="BLACKPINK">
-								</div>
-								<div class="card-content news">
-									<span class="card-title activator grey-text text-darken-4">BLACKPINK<i class="material-icons hiddenprint right">more_vert</i></span>
-									<p class="light">[20/01/2017]</p>
-									<p><strong>BLACKPINK ganha prêmio no Seoul Music Awards 2017</strong></p>
-								</div>
-								<div class="card-reveal">
-									<span class="card-title grey-text text-darken-4">BLACKPINK<i class="material-icons hiddenprint right">close</i></span>
-									<p class="light">[20/01/2017]</p>
-									<p><strong>BLACKPINK ganha prêmio no Seoul Music Awards 2017</strong></p>
-									<p>O grupo BLACKPINK ganhou o prêmio de Best New Artist no Seoul Music Awards 2017. O evento ocorreu em 19/01/2017 na Jamsil Arena, em Songpa District, Coreia do Sul, e reuniu os principais artistas atuais da indústria musical sul coreana.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col s12 m6 xl4">
-							<div class="card hoverable">
-								<div class="card-image waves-effect waves-block waves-light hiddenprint">
-									<img class="activator" src="images/news/twice-gda.jpg" alt="TWICE">
-								</div>
-								<div class="card-content news">
-									<span class="card-title activator grey-text text-darken-4">TWICE<i class="material-icons hiddenprint right">more_vert</i></span>
-									<p class="light">[14/01/2017]</p>
-									<p><strong>TWICE ganha prêmios no Golden Disk Awards 2017</strong></p>
-								</div>
-								<div class="card-reveal">
-									<span class="card-title grey-text text-darken-4">TWICE<i class="material-icons hiddenprint right">close</i>
-									</span>
-									<p class="light">[14/01/2017]</p>
-									<p><strong>TWICE ganha prêmios no Golden Disk Awards 2017</strong></p>
-									<p>O grupo TWICE ganhou os prêmios de Digital Daesang e Digital Bonsang por sua faixa "Cheer Up" no Golden Disk Awards 2017. O evento ocorreu em 13/01/2017 no KINTEX, em Goyang, Coreia do Sul.</p>
-								</div>
-							</div>
-						</div>
+							{{/each}}
+						</script>
+						<!-- Final do template -->
+						<!-- div onde serão colocados os cards e seu conteúdo -->
+						<div id="newsContent"></div>
 					</div>
 				</section>
 			</div>
@@ -210,7 +127,7 @@
 	</main>
 	
 	<!-- Rodapé da página: faz uso do componente footer do Materialize. As imagens do rodapé são carregadas de forma diferente de acordo com o tamanho da tela do dispositivo, o que faz, por exemplo, que para dispositivos móveis sejam carregadas imagens mais leves -->
-    <footer class="page-footer grey darken-4">
+    <footer class="page-footer grey darken-4 hiddenfooter" id="newsFooterDelayed">
         <div class="container">
             <div class="row">
 				<!-- Logo da empresa -->
@@ -259,12 +176,14 @@
                 Copyright © 2017 CLEVER ENTERTAINMENT, TODOS OS DIREITOS RESERVADOS.
             </div>
         </div>
-    </footer>
-    
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	</footer>
+	
+	<!-- Scripts -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/handlebars-v4.0.5.js"></script>
     <script src="js/materialize.js"></script>
+	<script src="js/newsContent.js"></script>
 	<script src="js/myScript.js"></script>
-    
+
 </body>
 </html>

@@ -72,140 +72,34 @@
 							<h5 class="grey-text text-darken-4"><i class="material-icons hiddenprint">grade</i> ARTISTAS</h5>
 						</div>
 					</div>
-					<!-- Aqui são encontrados os cards com informações sobre os artistas da empresa. Os comentários do primeiro card se aplicam aos demais, pois são análogos -->
+					<!-- Aqui são encontrados os cards com informações sobre os artistas da empresa. É feito uso de um template e da biblioteca handlebars de forma que não seja necessário replicar o código html comum a cada card. O conteúdo dos cards pode ser encontrado em 'js/artistasContent.js' -->
 					<div class="row">
-						<div class="col s12 m6 xl4">
-							<!-- Aqui é feito uso de um card, um componente do Materialize que apresenta uma maneira conveniente de exibir conteúdos compostos por diferentes tipos de objetos -->
-							<div class="card">
-								<!-- div correspondente à imagem do card. Aqui também é feito uso do componente JS 'Material Box' que permite ampliar e reduzir um imagem de maneira suave -->
-								<div class="card-image artists hiddenprint">
-									<img class="materialboxed" data-caption="BLACKPINK" src="images/artists/blackpink.jpg" alt="BLACKPINK">
-								</div>
-								<!-- div correspondente ao conteúdo do card -->
-								<div class="card-content">
-									<h5>BLACKPINK</h5>
-								</div>
-								<!-- Nesta div poderiam ter sido utilizados links relacionados ao card. Preferiu-se fazer uso de outro componente do Materialize, os 'chips', que representam pequenos blocos de informação que podem representar contatos, marcadores, etc -->
-								<div class="card-action">
-									<div class="chip">Grupo feminino</div>
-									<div class="chip">K-pop</div>			
-								</div>
-							</div>
-						</div>
-						<div class="col s12 m6 xl4">
-							<div class="card">
-								<div class="card-image artists hiddenprint">
-									<img class="materialboxed" data-caption="BTS" src="images/artists/bts.jpg" alt="BTS">
-								</div>
-								<div class="card-content">
-									<h5>BTS (Bangtan Boys)</h5>
-								</div>
-								<div class="card-action">
-									<div class="chip">Grupo masculino</div>
-									<div class="chip">K-pop</div>			
+						<!-- Incício do template -->
+						<script id="artistsTemplate" type="text/x-handlebars-template">
+							{{#each input}}
+							<div class="col s12 m6 xl4">
+								<!-- Aqui é feito uso de um card, um componente do Materialize que apresenta uma maneira conveniente de exibir conteúdos compostos por diferentes tipos de objetos -->
+								<div class="card">
+									<!-- div correspondente à imagem do card. Aqui também é feito uso do componente JS 'Material Box' que permite ampliar e reduzir um imagem de maneira suave -->
+									<div class="card-image artists hiddenprint">
+										<img class="materialboxed" data-caption="{{caption}}" src="{{imageSrc}}" alt="{{caption}}">
+									</div>
+									<!-- div correspondente ao conteúdo do card -->
+									<div class="card-content">
+										<h5>{{caption}}</h5>
+									</div>
+									<!-- Nesta div poderiam ter sido utilizados links relacionados ao card. Preferiu-se fazer uso de outro componente do Materialize, os 'chips', que representam pequenos blocos de informação que podem representar contatos, marcadores, etc -->
+									<div class="card-action">
+										<div class="chip">{{chip1}}</div>
+										<div class="chip">{{chip2}}</div>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col s12 m6 xl4">
-							<div class="card">
-								<div class="card-image artists hiddenprint">
-									<img class="materialboxed" data-caption="Choi Siwon" src="images/artists/choi-siwon.jpg" alt="Choi Siwon">
-								</div>
-								<div class="card-content">
-									<h5>Choi Siwon</h5>
-								</div>
-								<div class="card-action">
-									<div class="chip">Ator</div>
-									<div class="chip">Cantor</div>
-									<div class="chip">K-pop</div>			
-								</div>
-							</div>
-						</div>
-						<div class="col s12 m6 xl4">
-							<div class="card">
-								<div class="card-image artists hiddenprint">
-									<img class="materialboxed" data-caption="Go Ara" src="images/artists/go-ara.png" alt="Go Ara">
-								</div>
-								<div class="card-content">
-									<h5>Go Ara</h5>
-								</div>
-								<div class="card-action">
-									<div class="chip">Atriz</div>
-									<div class="chip">Modelo</div>
-									<div class="chip">K-pop</div>			
-								</div>
-							</div>
-						</div>
-						<div class="col s12 m6 xl4">
-							<div class="card">
-								<div class="card-image artists hiddenprint">
-									<img class="materialboxed" data-caption="Monsta X" src="images/artists/monsta-x.jpg" alt="Monsta X">
-								</div>
-								<div class="card-content">
-									<h5>Monsta X</h5>
-								</div>
-								<div class="card-action">
-									<div class="chip">Grupo masculino</div>
-									<div class="chip">K-pop</div>			
-								</div>
-							</div>
-						</div>
-						<div class="col s12 m6 xl4">
-							<div class="card">
-								<div class="card-image artists hiddenprint">
-									<img class="materialboxed" data-caption="NCT 127" src="images/artists/nct.jpg" alt="NCT 127">
-								</div>
-								<div class="card-content">
-									<h5>NCT 127</h5>
-								</div>
-								<div class="card-action">
-									<div class="chip">Grupo masculino</div>
-									<div class="chip">K-pop</div>			
-								</div>
-							</div>
-						</div>
-						<div class="col s12 m6 xl4">
-							<div class="card">
-								<div class="card-image artists hiddenprint">
-									<img class="materialboxed" data-caption="SHINee" src="images/artists/shinee.jpg" alt="SHINee">
-								</div>
-								<div class="card-content">
-									<h5>SHINee</h5>
-								</div>
-								<div class="card-action">
-									<div class="chip">Grupo masculino</div>
-									<div class="chip">K-pop</div>			
-								</div>
-							</div>
-						</div>
-						<div class="col s12 m6 xl4">
-							<div class="card">
-								<div class="card-image artists hiddenprint">
-									<img class="materialboxed" data-caption="TWICE" src="images/artists/twice.jpg" alt="TWICE">
-								</div>
-								<div class="card-content">
-									<h5>TWICE</h5>
-								</div>
-								<div class="card-action">
-									<div class="chip">Grupo feminino</div>
-									<div class="chip">K-pop</div>			
-								</div>
-							</div>
-						</div>
-						<div class="col s12 m6 xl4">
-							<div class="card">
-								<div class="card-image artists hiddenprint">
-									<img class="materialboxed" data-caption="VIXX" src="images/artists/vixx.jpg" alt="VIXX">
-								</div>
-								<div class="card-content">
-									<h5>VIXX</h5>
-								</div>
-								<div class="card-action">
-									<div class="chip">Grupo masculino</div>
-									<div class="chip">K-pop</div>			
-								</div>
-							</div>
-						</div>
+							{{/each}}
+						</script>
+						<!-- Final do template -->
+						<!-- div onde serão colocados os cards e seu conteúdo -->
+						<div id="artistsContent"></div>
 					</div>
 				</section>
 			</div>
@@ -213,7 +107,7 @@
 	</main>
 	
 	<!-- Rodapé da página: faz uso do componente footer do Materialize. As imagens do rodapé são carregadas de forma diferente de acordo com o tamanho da tela do dispositivo, o que faz, por exemplo, que para dispositivos móveis sejam carregadas imagens mais leves -->
-    <footer class="page-footer grey darken-4">
+    <footer class="page-footer grey darken-4 hiddenfooter" id="artistsFooterDelayed">
         <div class="container">
             <div class="row">
 				<!-- Logo da empresa -->
@@ -265,8 +159,10 @@
     </footer>
     
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/handlebars-v4.0.5.js"></script>
     <script src="js/materialize.js"></script>
+	<script src="js/artistsContent.js"></script>
 	<script src="js/myScript.js"></script>
     
 </body>

@@ -1,4 +1,10 @@
-// Código Javascript para executar e exibir o template com as notícias
+/* Arquivo: newsContent.js
+   Autor: Vladimir Belinski
+   Descrição: o presente arquivo faz parte da resolução do primeiro trabalho do CCR Tópicos Especiais em Desenvolvimento Web,
+   			  CC-UFFS 2017.1, ministrado pela professora Ma. Andressa Sebben. Nele pode ser encontrado o código utilizado para
+			  executar e exibir o template da página de notícias, bem como os dados que serão inseridos em cada card de notícia.
+*/
+
 $(document).ready(function() {
 	var news = { input: [
 		{imageSrc: "images/news/produce101.jpg", altDescr: "Produce 101", cardTitle: "PRODUCE 101", newsDate: "[05/04/2017]", newsTitle: "Clever Entertainment terá trainee participando do Produce 101", newsContent: "Em breve iniciará a segunda temporada de Produce 101, este ano com 101 trainess meninos disputando 11 vagas em um novo grupo. Na disputa estará também o trainee Ong Seong Woo da Clever Entertainment. O primeiro episódio será televisionado dia 07 de abril pela Mnet. Mostre apoio a nosso trainee!"},
@@ -14,6 +20,6 @@ $(document).ready(function() {
 	var buildTemplate = Handlebars.compile(source);
 	var output = buildTemplate(news);
 	$("#newsContent").html(output);
-	// Após os cards terem sido renderizados o footer é apresentado
+	// Após os cards terem sido renderizados o footer é apresentado (para não aparecer o footer rapidamente no meio da página)
 	$('#newsFooterDelayed').removeClass('hiddenfooter');
 });

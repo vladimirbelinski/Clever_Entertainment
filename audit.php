@@ -1,4 +1,4 @@
-<!-- Arquivo: audit.html
+<!-- Arquivo: audit.php
 	 Autor: Vladimir Belinski 
 	 Descrição: o presente arquivo faz parte da resolução do primeiro trabalho do CCR Tópicos Especiais em Desenvolvimento Web,
 	 			CC-UFFS 2017.1, ministrado pela professora Ma. Andressa Sebben. Nele, é desenvolvida a seção de audições, que
@@ -21,41 +21,13 @@
 <body>
 	<!-- Cabeçalho da página -->
     <header>
-		<!-- Menu de navegação: faz uso do componente Navbar e do componente JS SideNav -->
-		<nav class="white hiddenprint" role="navigation">
-			<div class="nav-wrapper container">
-				<!-- Logo do menu: para telas de tamanho >= a 600px é carregada uma imagem maior. Para telas de tamanho inferior é carregada uma imagem menor. Isso faz com que em dispositivos móveis, por exemplo, seja carregada uma imagem mais leve  -->
-				<a id="logo-container" href="index.html" class="brand-logo">
-					<picture class="hiddenprint">
-						<source media="(min-width: 600px)" srcset="images/logoB.jpg">
-						<source media="(min-width: 200px)" srcset="images/logoBSmall.jpg">
-						<img src="images/logo.jpg" alt="Clever Entertainment Logo" style="width:auto">
-					</picture>
-				</a>
-				<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons hiddenprint">menu</i></a>
-				<!-- Itens do menu normal -->
-				<ul class="right hide-on-med-and-down">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">Sobre Clever</a></li>
-					<li><a href="artists.html">Artistas</a></li>
-					<li><a href="news.html">Notícias</a></li>
-					<li><a href="audit.html">Audições</a></li>
-				</ul>
-				<!-- Itens do menu lateral -->
-				<ul class="side-nav" id="nav-mobile" >
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">Sobre Clever</a></li>
-					<li><a href="artists.html">Artistas</a></li>
-					<li><a href="news.html">Notícias</a></li>
-					<li><a href="audit.html">Audições</a></li>
-				</ul>
-			</div>
-		</nav>
+		<!-- Inclusão do menu de navegação comum a todas as páginas. O código do menu de navegação pode ser encontrado em 'includes/nav.php' -->
+		<?php include('includes/nav.php'); ?>
 		<!-- Breadcrumbs -->
 		<nav class="my_breadcrumbs" role="navigation">
 			<div class="nav-wrapper">
 				<div class="col s12 teal lighten-2">
-					<a href="index.html" class="breadcrumb">Home</a>
+					<a href="index.php" class="breadcrumb">Home</a>
 					<a class="breadcrumb">Audições</a>
 				</div>
 			</div>
@@ -156,12 +128,12 @@
 									<i class="material-icons hiddenprint prefix">location_on</i>
 									<select name="audit_country" id="audit_country" class="icons">
 										<option value="" disabled selected="selected">Escolha o país da audição *</option>
-										<option value="1" data-icon="images/countries/Brazil.png" class="circle">Brasil</option>
-										<option value="2" data-icon="images/countries/Canada.png" class="circle">Canadá</option>
-										<option value="3" data-icon="images/countries/China.png" class="circle">China</option>
-										<option value="4" data-icon="images/countries/South-Korea.png" class="circle">Coreia do Sul</option>
-										<option value="5" data-icon="images/countries/United-States.png" class="circle">Estados Unidos</option>
-										<option value="6" data-icon="images/countries/Thailand.png" class="circle">Tailândia</option>
+										<option value="1" data-icon="images/select/Brazil.png" class="circle">Brasil</option>
+										<option value="2" data-icon="images/select/Canada.png" class="circle">Canadá</option>
+										<option value="3" data-icon="images/select/China.png" class="circle">China</option>
+										<option value="4" data-icon="images/select/South-Korea.png" class="circle">Coreia do Sul</option>
+										<option value="5" data-icon="images/select/United-States.png" class="circle">Estados Unidos</option>
+										<option value="6" data-icon="images/select/Thailand.png" class="circle">Tailândia</option>
 									</select>
 									<label class="sr-only">Escolha o país da audição *</label>
 									<!-- Nessa div são inseridas mensagens de erro acerca do campo, se existirem -->
@@ -196,54 +168,8 @@
       
 	<!-- Rodapé da página: faz uso do componente footer do Materialize. As imagens do rodapé são carregadas de forma diferente de acordo com o tamanho da tela do dispositivo, o que faz, por exemplo, que para dispositivos móveis sejam carregadas imagens mais leves -->
     <footer class="page-footer grey darken-4">
-        <div class="container">
-            <div class="row">
-				<!-- Logo da empresa -->
-                <div class="col s12 m5 center hiddenprint">
-                    <picture>
-						<source media="(min-width: 992px)" srcset="images/logo.jpg">
-						<source media="(min-width: 200px)" srcset="images/logoSmall.jpg">
-						<img src="images/logo.jpg" alt="Clever Entertainment Logo" style="width:auto">
-					</picture>
-                </div>
-				<!-- Contato da empresa -->
-                <div class="col s5 offset-s1 m3 offset-m1">
-                    <h5 class="white-text">Contato</h5>
-                    <p class="white-text">+55(49)3333-3333 contact@clever.com</p>
-                </div>
-				<!-- Links para outras mídias da empresa -->
-                <div class="col s5 offset-s1 m3 hiddenprint">
-                    <h5 class="white-text">Nos siga</h5>
-                    <a href="https://open.spotify.com/user/vladimirbelinski">
-						<picture class="hiddenprint">
-							<source media="(min-width: 992px)" srcset="images/spotify.png">
-							<source media="(min-width: 200px)" srcset="images/spotifySmall.png">
-							<img src="images/spotify.png" alt="Spotify" style="width:auto">
-						</picture>
-					</a>
-                    <a href="https://www.facebook.com/vlbelinski">
-						<picture class="hiddenprint">
-							<source media="(min-width: 992px)" srcset="images/facebook.png">
-							<source media="(min-width: 200px)" srcset="images/facebookSmall.png">
-							<img src="images/facebook.png" alt="Facebook" style="width:auto">
-						</picture>
-					</a>
-                    <a href="https://github.com/vladimirbelinski/Projeto_1__WEB">
-						<picture class="hiddenprint">
-							<source media="(min-width: 992px)" srcset="images/github.png">
-							<source media="(min-width: 200px)" srcset="images/githubSmall.png">
-							<img src="images/github.png" alt="GitHub" style="width:auto">
-						</picture>
-					</a>
-                </div>
-            </div>
-        </div>
-		<!-- Div de direitos autorais-->
-        <div class="footer-copyright grey darken-4">
-            <div class="container">
-                Copyright © 2017 CLEVER ENTERTAINMENT, TODOS OS DIREITOS RESERVADOS.
-            </div>
-        </div>
+        <!-- Inclusão do código do rodapé comum a todas as páginas. Tal código pode ser encontrado em 'includes/footer.php' -->
+        <?php include('includes/footer.php'); ?>
     </footer>
     
     <!-- Scripts -->

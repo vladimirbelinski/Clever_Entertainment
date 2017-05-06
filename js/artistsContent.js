@@ -1,4 +1,10 @@
-// Código Javascript para executar e exibir o template com os artistas
+/* Arquivo: artistsContent.js
+   Autor: Vladimir Belinski
+   Descrição: o presente arquivo faz parte da resolução do primeiro trabalho do CCR Tópicos Especiais em Desenvolvimento Web,
+   			  CC-UFFS 2017.1, ministrado pela professora Ma. Andressa Sebben. Nele pode ser encontrado o código utilizado para
+			  executar e exibir o template da página de artistas, bem como os dados que serão inseridos em cada card de artista.
+*/
+
 $(document).ready(function() {
 	var artists = { input: [
 		{caption: "BLACKPINK", imageSrc: "images/artists/blackpink.jpg", chip1: "Grupo feminino", chip2: "K-pop"},
@@ -17,6 +23,6 @@ $(document).ready(function() {
 	var buildTemplate = Handlebars.compile(source);
 	var output = buildTemplate(artists);
 	$("#artistsContent").html(output);
-	// Após os cards terem sido renderizados o footer é apresentado
+	// Após os cards terem sido renderizados o footer é apresentado (para não aparecer o footer rapidamente no meio da página)
 	$('#artistsFooterDelayed').removeClass('hiddenfooter');
 });

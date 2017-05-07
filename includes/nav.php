@@ -27,6 +27,12 @@
 		</ul>
 		<!-- Itens do menu lateral -->
 		<ul class="side-nav" id="nav-mobile" >
+			<li><div class="userView">
+      				<div class="background">
+        				<img src="images/nav/logoBSmall.jpg">
+      				</div>
+				</div>
+			</li>
 			<li><a href="index.php">Home</a></li>
 			<li><a href="about.php">Sobre Clever</a></li>
 			<li><a href="artists.php">Artistas</a></li>

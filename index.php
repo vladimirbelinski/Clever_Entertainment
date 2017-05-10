@@ -48,9 +48,9 @@
 						</div>
 					</div>
 				</div>
-				<!-- Imagem sob efeito do parallax. Para tamanhos de tela >= a 600px é carregada uma imagem completa. Para telas de tamanho inferior é carregada uma imagem menor (cantos cortados). Isso faz com que em dispositivos móveis, por exemplo, seja carregada uma imagem mais leve -->
+				<!-- Imagem sob efeito do parallax. Para tamanhos de tela > a 600px é carregada uma imagem completa. Para telas de tamanho inferior é carregada uma imagem menor (cantos cortados). Isso faz com que em dispositivos móveis, por exemplo, seja carregada uma imagem mais leve -->
 				<picture class="parallax hiddenprint">
-					<source media="(min-width: 600px)" srcset="images/index/vixx.jpg">
+					<source media="(min-width: 601px)" srcset="images/index/vixx.jpg">
 					<source media="(min-width: 200px)" srcset="images/index/vixxSmall.jpg">
 					<img src="images/index/vixx.jpg" alt="VIXX" style="width:auto">
 				</picture>
@@ -64,7 +64,7 @@
 						<!-- div de título/texto com ícone -->
 						<div class="col s12 m6 xl4">
 							<div class="icon-block">
-								<h2 class="center grey-text text-darken-4"><i class="material-icons hiddenprint">redeem</i></h2>
+								<h2 class="center grey-text text-darken-4"><i class="material-icons hiddenprint" aria-hidden="true">redeem</i></h2>
 								<h5 class="center">Fique ligado!</h5>
 								<p class="light">Dentro de algumas semanas a Clever Entertainment estará realizando um Survival Show com seus trainees para a formação de um novo grupo misto.</p><p class="light">A atração será televisionada todas as quintas-feiras às 23h00min pela tvN.</p> <p class="light">Em breve mais informações serão disponibilizadas. Não perca!</p>
 							</div>
@@ -74,7 +74,7 @@
 						<!-- div de título/texto com ícone -->
 						<div class="col s12 m6 xl4">
 							<div class="icon-block">
-								<h2 class="center grey-text text-darken-4"><i class="material-icons hiddenprint">group</i></h2>
+								<h2 class="center grey-text text-darken-4"><i class="material-icons hiddenprint" aria-hidden="true">group</i></h2>
 								<h5 class="center">Meet&ampGreet</h5>
 								<p class="light">No dia 19/06/2017 será promovido o 3º Meet&ampGreet com artistas da Clever Entertainment, no qual se farão presentes os grupos BTS, TWICE e VIXX.</p>
 								<p>Data: 19/06/2017</p>
@@ -87,7 +87,7 @@
 						<!-- div com ícone e onde são embutidos vídeos do Youtube -->
 						<div class="col s12 m12 xl4">
 							<div class="icon-block">
-								<h2 class="center grey-text text-darken-4"><i class="material-icons hiddenprint">video_library</i></h2>
+								<h2 class="center grey-text text-darken-4"><i class="material-icons hiddenprint" aria-hidden="true">video_library</i></h2>
 								<h5 class="center">Vídeos em Destaque</h5>
 								<figure class="col s12 m6 xl12">
 									<div class="video-container hiddenprint">
@@ -123,9 +123,9 @@
 						</div>
 					</div>
 				</div>
-				<!-- Imagem sob efeito do parallax. Para tamanhos de tela >= a 600px é carregada uma imagem completa. Para telas de tamanho inferior é carregada uma imagem menor (cantos cortados). Isso faz com que em dispositivos móveis, por exemplo, seja carregada uma imagem mais leve -->
+				<!-- Imagem sob efeito do parallax. Para tamanhos de tela > a 600px é carregada uma imagem completa. Para telas de tamanho inferior é carregada uma imagem menor (cantos cortados). Isso faz com que em dispositivos móveis, por exemplo, seja carregada uma imagem mais leve -->
 				<picture class="parallax hiddenprint">
-					<source media="(min-width: 600px)" srcset="images/index/twice.jpg">
+					<source media="(min-width: 601px)" srcset="images/index/twice.jpg">
 					<source media="(min-width: 200px)" srcset="images/index/twiceSmall.jpg">
 					<img src="images/index/twice.jpg" alt="TWICE" style="width:auto">
 				</picture>
@@ -138,7 +138,7 @@
 					<!-- Aqui são encontrados os cards com versões básicas das notícias. Os comentários do primeiro card se aplicam aos demais, pois são análogos -->
                     <div class="col s12 m12 l8">
 						<!-- título com ícone -->
-                        <h5 class="grey-text text-darken-4"><i class="material-icons hiddenprint">description</i> NOTÍCIAS</h5>
+                        <h5 class="grey-text text-darken-4"><i class="material-icons hiddenprint" aria-hidden="true">description</i> NOTÍCIAS</h5>
                         <div class="col s12 m6">
 							<!-- Aqui é feito uso de um card, um componente do Materialize que apresenta uma maneira conveniente de exibir conteúdos compostos por diferentes tipos de objetos -->
                             <div class="card">
@@ -146,7 +146,7 @@
                                 <div class="card-image hiddenprint">
                                     <img src="images/news/produce101.jpg" alt="Produce 101">
 									<!-- Aqui é feito uso do componente 'Button' do Materialize, com classe floating. Nesse botão também é usado 'waves', uma biblioteca externa incluída no Materialize que permite criar o efeito de tinta do Material Design	-->
-                                    <a class="btn-floating halfway-fab waves-effect waves-light blue darken-4" href="news.php"><i class="material-icons hiddenprint">add</i></a>
+                                    <a class="btn-floating halfway-fab waves-effect waves-light blue darken-4" href="news.php"><i class="material-icons hiddenprint" aria-hidden="true">add</i></a>
                                 </div>
 								<!-- div de conteúdo do card -->
                                 <div class="card-content"><p class="light">[05/04/2017]</p>
@@ -158,7 +158,7 @@
                             <div class="card">
                                 <div class="card-image hiddenprint">
                                     <img src="images/news/monstax-beautiful.jpg" alt="Monsta X">
-                                    <a class="btn-floating halfway-fab waves-effect waves-light blue darken-4" href="news.php"><i class="material-icons hiddenprint">add</i></a>
+                                    <a class="btn-floating halfway-fab waves-effect waves-light blue darken-4" href="news.php"><i class="material-icons hiddenprint" aria-hidden="true">add</i></a>
                                 </div>
                                 <div class="card-content">
                                     <p class="light">[21/03/2017]</p>
@@ -171,7 +171,7 @@
                 <section>
                     <div class="col s12 l4">
 						<!-- título com ícone -->
-                        <h5 class="grey-text text-darken-4"><i class="material-icons hiddenprint">schedule</i> CONCERTOS</h5>
+                        <h5 class="grey-text text-darken-4"><i class="material-icons hiddenprint" aria-hidden="true">schedule</i> CONCERTOS</h5>
 						<!-- Aqui também é feito uso do componente card, mas em conjunto com o componente JS 'Tabs', que consiste em uma lista não ordenada de guias que possuem hashes correspondentes a ids de divs. Ao se clicar em uma guia, somente o container com o identificador de tab correspondente fica visível -->
                         <div class="card">
                             <div class="card-content grey-text text-darken-4 center">

@@ -41,7 +41,7 @@
 					<!-- Título informativo da página com ícone -->
 					<div class="row">
 						<div class="col s12">
-							<h5 class="grey-text text-darken-4"><i class="material-icons hiddenprint">grade</i> ARTISTAS</h5>
+							<h5 class="grey-text text-darken-4"><i class="material-icons hiddenprint" aria-hidden="true">grade</i> ARTISTAS</h5>
 						</div>
 					</div>
 					<!-- Aqui são encontrados os cards com informações sobre os artistas da empresa. É feito uso de um template e da biblioteca handlebars de forma que não seja necessário replicar o código html comum a cada card. O conteúdo dos cards pode ser encontrado em 'js/artistasContent.js' -->

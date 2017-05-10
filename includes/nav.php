@@ -8,10 +8,10 @@
 <!-- Menu de navegação: faz uso do componente Navbar e do componente JS SideNav -->
 <nav class="white hiddenprint" role="navigation">
 	<div class="nav-wrapper container">
-		<!-- Logo do menu: para telas de tamanho >= a 600px é carregada uma imagem maior. Para telas de tamanho inferior é carregada uma imagem menor. Isso faz com que em dispositivos móveis, por exemplo, seja carregada uma imagem mais leve  -->
+		<!-- Logo do menu: para telas de tamanho > a 600px é carregada uma imagem maior. Para telas de tamanho inferior é carregada uma imagem menor. Isso faz com que em dispositivos móveis, por exemplo, seja carregada uma imagem mais leve  -->
 		<a id="logo-container" href="index.php" class="brand-logo">
 			<picture class="hiddenprint">
-				<source media="(min-width: 600px)" srcset="images/nav/logoB.jpg">
+				<source media="(min-width: 601px)" srcset="images/nav/logoB.jpg">
 				<source media="(min-width: 200px)" srcset="images/nav/logoBSmall.jpg">
 				<img src="images/nav/logo.jpg" alt="Clever Entertainment Logo" style="width:auto">
 			</picture>

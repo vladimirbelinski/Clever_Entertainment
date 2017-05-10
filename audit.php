@@ -41,7 +41,7 @@
 					<!-- Título informativo da página com ícone -->
 					<div class="row">
 						<div class="col s12">
-							<h5 class="grey-text text-darken-4 center"><i class="material-icons hiddenprint">language</i> CADASTRO PARA AUDIÇÃO GLOBAL</h5>
+							<h5 class="grey-text text-darken-4 center"><i class="material-icons hiddenprint" aria-hidden="true">language</i> CADASTRO PARA AUDIÇÃO GLOBAL</h5>
 						</div>
 					</div>
 					<div class="row">

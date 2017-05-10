@@ -40,13 +40,13 @@
 					<!-- Título informativo da página com ícone. Aqui também é linkada a função de abertura do componente JS 'Tap Target' (Feature Discovery) a outro componente, um 'badge', que, por sua vez, usa 'waves', uma biblioteca externa incluída no Materialize que permite criar o efeito de tinta do Material Design  -->
 					<div class="row">
 						<div class="col s12">
-							<h5 class="grey-text text-darken-4"><i class="material-icons hiddenprint">description</i> NOTÍCIAS <span class="new badge waves-effect waves-light hoverable hiddenprint" data-badge-caption="novo" onclick="$('.tap-target').tapTarget('open')">DESCUBRA</span></h5>
+							<h5 class="grey-text text-darken-4"><i class="material-icons hiddenprint" aria-hidden="true">description</i> NOTÍCIAS <span class="new badge waves-effect waves-light hoverable hiddenprint" data-badge-caption="novo" onclick="$('.tap-target').tapTarget('open')">DESCUBRA</span></h5>
 						</div>
 					</div>
 					<!-- Aqui pode ser encontrado o botão e as div associadas ao componente JS 'Tap Target' (Feature Discovery)	-->
 					<div class="row hiddenprint">
 						<div class="fixed-action-btn">
-							<a id="menu" class="btn btn-floating btn-large teal"><i class="material-icons hiddenprint">menu</i></a>
+							<a id="menu" class="btn btn-floating btn-large teal"><i class="material-icons hiddenprint" aria-hidden="true">menu</i></a>
 						</div>
 						<div class="tap-target-wrapper">
 							<div class="tap-target teal" data-activates="menu">
@@ -56,7 +56,7 @@
 								</div>
 							</div>
 							<div class="tap-target-wave">
-								<a class="btn btn-floating btn-large teal tap-target-origin"><i class="material-icons hiddenprint">menu</i></a>
+								<a class="btn btn-floating btn-large teal tap-target-origin"><i class="material-icons hiddenprint" aria-hidden="true">menu</i></a>
 							</div>
 						</div>
 					</div>
@@ -74,13 +74,13 @@
 									</div>
 									<!-- div correspondente ao conteúdo externo do card -->
 									<div class="card-content news">
-										<span class="card-title activator grey-text text-darken-4">{{cardTitle}}<i class="material-icons hiddenprint right">more_vert</i></span>
+										<span class="card-title activator grey-text text-darken-4">{{cardTitle}}<i class="material-icons hiddenprint right" aria-hidden="true">more_vert</i></span>
 										<p class="light">{{newsDate}}</p>
 										<p><strong>{{newsTitle}}</strong></p>
 									</div>
 									<!-- div correspondente ao conteúdo interno do card. Ao ser clicado na imagem ou ativador da notícia é apresentada essa div contendo uma versão mais completa da notícia -->
 									<div class="card-reveal">
-										<span class="card-title grey-text text-darken-4">{{cardTitle}}<i class="material-icons hiddenprint right">close</i></span>
+										<span class="card-title grey-text text-darken-4">{{cardTitle}}<i class="material-icons hiddenprint right" aria-hidden="true">close</i></span>
 										<p class="light">{{newsDate}}</p>
 										<p><strong>{{newsTitle}}</strong></p>
 										<p>{{newsContent}}</p>

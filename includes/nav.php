@@ -13,7 +13,7 @@
 			<picture class="hiddenprint">
 				<source media="(min-width: 601px)" srcset="images/nav/logoB.jpg">
 				<source media="(min-width: 200px)" srcset="images/nav/logoBSmall.jpg">
-				<img src="images/nav/logo.jpg" alt="Clever Entertainment Logo" style="width:auto">
+				<img src="images/nav/logo.jpg" alt="Logo da Clever Entertainment" style="width:auto">
 			</picture>
 		</a>
 		<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons hiddenprint">menu</i></a>
@@ -29,7 +29,7 @@
 		<ul class="side-nav" id="nav-mobile" >
 			<li><div class="userView">
       				<div class="background">
-        				<img src="images/nav/logoBSmall.jpg">
+        				<img src="images/nav/logoBSmall.jpg" alt="Logo da Clever Entertainment">
       				</div>
 				</div>
 			</li>

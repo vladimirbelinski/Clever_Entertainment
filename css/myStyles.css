@@ -11,6 +11,11 @@ nav .brand-logo {
     color: #444;
 }
 
+/* Customização do menu de navegação - para um item trocar de cor também quando for usado tab */
+nav ul a:focus {
+    background-color: rgba(0,0,0,0.1);
+}
+
 /* Customização do side-nav */
 .side-nav .userView {
     position: relative;

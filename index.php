@@ -15,7 +15,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>:: Clever Entertainment ::</title>
+    <title>Clever Entertainment</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
     <link rel="shortcut icon" type="image/x-icon" href="images/logo_icon.png" />
@@ -44,7 +44,7 @@
 						</div>
 						<div class="row center">
 							<!-- Aqui é feito uso do componente 'Button' do Materialize, no modo raised. Nesse botão tembém é usado 'waves', uma biblioteca externa incluída no Materialize que permite criar o efeito de tinta do Material Design	-->
-							<a href="about.php" id="contest-button" class="btn-large waves-effect waves-light teal lighten-1">Conheça a Clever</a>
+							<a role="button" href="about.php" id="contest-button" class="btn-large waves-effect waves-light teal lighten-1">Conheça a Clever</a>
 						</div>
 					</div>
 				</div>
@@ -52,7 +52,7 @@
 				<picture class="parallax hiddenprint">
 					<source media="(min-width: 601px)" srcset="images/index/vixx.jpg">
 					<source media="(min-width: 200px)" srcset="images/index/vixxSmall.jpg">
-					<img src="images/index/vixx.jpg" alt="VIXX" style="width:auto">
+					<img src="images/index/vixx.jpg" alt="Imagem dos integrantes do grupo VIXX" style="width:auto">
 				</picture>
 			</div>
 		</section>
@@ -119,7 +119,7 @@
 						</div>
 						<div class="row center">
 							<!-- Aqui é feito uso do componente 'Button' do Materialize, no modo raised. Nesse botão tembém é usado 'waves', uma biblioteca externa incluída no Materialize que permite criar o efeito de tinta do Material Design	-->
-							<a href="audit.php" id="audit-button" class="btn-large waves-effect waves-light yellow darken-4">Agendar Audição</a>
+							<a role="button" href="audit.php" id="audit-button" class="btn-large waves-effect waves-light yellow darken-4">Agendar Audição</a>
 						</div>
 					</div>
 				</div>
@@ -127,7 +127,7 @@
 				<picture class="parallax hiddenprint">
 					<source media="(min-width: 601px)" srcset="images/index/twice.jpg">
 					<source media="(min-width: 200px)" srcset="images/index/twiceSmall.jpg">
-					<img src="images/index/twice.jpg" alt="TWICE" style="width:auto">
+					<img src="images/index/twice.jpg" alt="Imagem das integrantes do grupo Twice batendo em portas, como foto de divulgação de sua faixa Knock Knock" style="width:auto">
 				</picture>
 			</div>
 		</section>
@@ -144,9 +144,9 @@
                             <div class="card">
 								<!-- div da imagem do card e botão de mais detalhes-->
                                 <div class="card-image hiddenprint">
-                                    <img src="images/news/produce101.jpg" alt="Produce 101">
+                                    <img src="images/news/produce101.jpg" alt="Imagem dos contestantes e da apresentadora de Produce 101 no palco principal do programa">
 									<!-- Aqui é feito uso do componente 'Button' do Materialize, com classe floating. Nesse botão também é usado 'waves', uma biblioteca externa incluída no Materialize que permite criar o efeito de tinta do Material Design	-->
-                                    <a class="btn-floating halfway-fab waves-effect waves-light blue darken-4" href="news.php"><i class="material-icons hiddenprint" aria-hidden="true">add</i></a>
+                                    <a role="button" class="btn-floating halfway-fab waves-effect waves-light blue darken-4" href="news.php"><i class="material-icons hiddenprint" aria-hidden="true">add</i></a>
                                 </div>
 								<!-- div de conteúdo do card -->
                                 <div class="card-content"><p class="light">[05/04/2017]</p>
@@ -157,8 +157,8 @@
                         <div class="col s12 m6">
                             <div class="card">
                                 <div class="card-image hiddenprint">
-                                    <img src="images/news/monstax-beautiful.jpg" alt="Monsta X">
-                                    <a class="btn-floating halfway-fab waves-effect waves-light blue darken-4" href="news.php"><i class="material-icons hiddenprint" aria-hidden="true">add</i></a>
+                                    <img src="images/news/monstax-beautiful.jpg" alt="Imagem dos integrantes do grupo Monsta X sentados">
+                                    <a role="button" class="btn-floating halfway-fab waves-effect waves-light blue darken-4" href="news.php"><i class="material-icons hiddenprint" aria-hidden="true">add</i></a>
                                 </div>
                                 <div class="card-content">
                                     <p class="light">[21/03/2017]</p>

@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>:: Clever Entertainment ::</title>
+    <title>Clever Entertainment</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
     <link rel="shortcut icon" type="image/x-icon" href="images/logo_icon.png" />
@@ -40,13 +40,13 @@
 					<!-- Título informativo da página com ícone. Aqui também é linkada a função de abertura do componente JS 'Tap Target' (Feature Discovery) a outro componente, um 'badge', que, por sua vez, usa 'waves', uma biblioteca externa incluída no Materialize que permite criar o efeito de tinta do Material Design  -->
 					<div class="row">
 						<div class="col s12">
-							<h5 class="grey-text text-darken-4"><i class="material-icons hiddenprint" aria-hidden="true">description</i> NOTÍCIAS <span class="new badge waves-effect waves-light hoverable hiddenprint" data-badge-caption="novo" onclick="$('.tap-target').tapTarget('open')">DESCUBRA</span></h5>
+							<h5 class="grey-text text-darken-4"><i class="material-icons hiddenprint" aria-hidden="true">description</i> NOTÍCIAS <span role="button" class="new badge waves-effect waves-light hoverable hiddenprint" data-badge-caption="novo" onclick="$('.tap-target').tapTarget('open')">DESCUBRA</span></h5>
 						</div>
 					</div>
 					<!-- Aqui pode ser encontrado o botão e as div associadas ao componente JS 'Tap Target' (Feature Discovery)	-->
 					<div class="row hiddenprint">
 						<div class="fixed-action-btn">
-							<a id="menu" class="btn btn-floating btn-large teal"><i class="material-icons hiddenprint" aria-hidden="true">menu</i></a>
+							<a role="button" id="menu" class="btn btn-floating btn-large teal"><i class="material-icons hiddenprint" aria-hidden="true">menu</i></a>
 						</div>
 						<div class="tap-target-wrapper">
 							<div class="tap-target teal" data-activates="menu">
@@ -56,7 +56,7 @@
 								</div>
 							</div>
 							<div class="tap-target-wave">
-								<a class="btn btn-floating btn-large teal tap-target-origin"><i class="material-icons hiddenprint" aria-hidden="true">menu</i></a>
+								<a role="button" class="btn btn-floating btn-large teal tap-target-origin"><i class="material-icons hiddenprint" aria-hidden="true">menu</i></a>
 							</div>
 						</div>
 					</div>

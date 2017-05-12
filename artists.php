@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>:: Clever Entertainment ::</title>
+    <title>Clever Entertainment</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
     <link rel="shortcut icon" type="image/x-icon" href="images/logo_icon.png" />
@@ -54,7 +54,7 @@
 								<div class="card">
 									<!-- div correspondente à imagem do card. Aqui também é feito uso do componente JS 'Material Box' que permite ampliar e reduzir um imagem de maneira suave -->
 									<div class="card-image artists hiddenprint">
-										<img class="materialboxed" data-caption="{{caption}}" src="{{imageSrc}}" alt="{{caption}}">
+										<img class="materialboxed" data-caption="{{caption}}" src="{{imageSrc}}" alt="{{alt}}">
 									</div>
 									<!-- div correspondente ao conteúdo do card -->
 									<div class="card-content">

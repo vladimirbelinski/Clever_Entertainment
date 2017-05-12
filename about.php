@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>:: Clever Entertainment ::</title>
+    <title>Clever Entertainment</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
     <link rel="shortcut icon" type="image/x-icon" href="images/logo_icon.png" />
@@ -62,12 +62,12 @@
 								<li>
 									<div class="collapsible-header"><i class="material-icons hiddenprint" aria-hidden="true">star</i>Artistas</div>
 									<!-- No conteúdo desse item da lista também é feito uso do componente 'badge' -->
-									<div class="collapsible-body"><p>A Clever Entertainment trabalha com artistas nas seguintes categorias: ator/atriz, cantor(a), dançarino(a) e modelo. Ademais, também é responsável pela formação de grupos. Os artistas da Clever Entertainment são denominados coletivamente como Clever Cosmos.<a href="artists.php"><span class="new badge" data-badge-caption="Ver artistas"></span></a></p></div>
+									<div class="collapsible-body"><p>A Clever Entertainment trabalha com artistas nas seguintes categorias: ator/atriz, cantor(a), dançarino(a) e modelo. Ademais, também é responsável pela formação de grupos. Os artistas da Clever Entertainment são denominados coletivamente como Clever Cosmos.<a role="button" href="artists.php"><span class="new badge" data-badge-caption="Ver artistas"></span></a></p></div>
 								</li>
 								<li>
 									<div class="collapsible-header"><i class="material-icons hiddenprint" aria-hidden="true">work</i>Processo de audições</div>
 									<!-- No conteúdo desse item da lista também é feito uso do componente 'badge' -->
-									<div class="collapsible-body"><p>A Clever Entertainment realiza constantemente audições nos seguintes países: Brasil, Canadá, China, Coreia do Sul, Estados Unidos e Tailândia. Se você sempre sonhou em ser um Clever Artist, agende já sua audição!<a href="audit.php"><span class="new badge" data-badge-caption="Agendar audição"></span></a></p></div>
+									<div class="collapsible-body"><p>A Clever Entertainment realiza constantemente audições nos seguintes países: Brasil, Canadá, China, Coreia do Sul, Estados Unidos e Tailândia. Se você sempre sonhou em ser um Clever Artist, agende já sua audição!<a role="button" href="audit.php"><span class="new badge" data-badge-caption="Agendar audição"></span></a></p></div>
 								</li>
 								<li>
 									<div class="collapsible-header"><i class="material-icons hiddenprint" aria-hidden="true">chat_bubble_outline</i>Contate-nos</div>
@@ -90,11 +90,11 @@
 							<h5><i class="material-icons hiddenprint" aria-hidden="true">business</i> Parceiros</h5>
 							<!-- Aqui é feito uso do componente JS Carousel, um componente que apresenta um comportamento diferenciado de um slider de imagens -->
 							<div class="carousel">
-								<a class="carousel-item" href="http://www.genie.co.kr/!"><img src="images/about/genie.png" alt="Logo Genie"></a>
-								<a class="carousel-item" href="http://mwave.interest.me/en/index.m"><img src="images/about/mnet.png" alt="Logo Mnet"></a>
-								<a class="carousel-item" href="http://tvn.tving.com/tvn"><img src="images/about/tvn.png" alt="Logo tvN"></a>
-								<a class="carousel-item" href="http://www.melon.com/"><img src="images/about/melon.png" alt="Logo Melon"></a>
-								<a class="carousel-item" href="https://www.youtube.com/user/LOENENT"><img src="images/about/1thek.png" alt="Logo 1theK"></a>
+								<a class="carousel-item" href="http://www.genie.co.kr/!"><img src="images/about/genie.png" alt="Logo do Genie"></a>
+								<a class="carousel-item" href="http://mwave.interest.me/en/index.m"><img src="images/about/mnet.png" alt="Logo da Mnet"></a>
+								<a class="carousel-item" href="http://tvn.tving.com/tvn"><img src="images/about/tvn.png" alt="Logo da tvN"></a>
+								<a class="carousel-item" href="http://www.melon.com/"><img src="images/about/melon.png" alt="Logo do Melon"></a>
+								<a class="carousel-item" href="https://www.youtube.com/user/LOENENT"><img src="images/about/1thek.png" alt="Logo do 1theK"></a>
 							 </div>
 							<!-- Aqui é feito uso do painel de um card, um componente do Materialize -->
 							<div class="card-panel teal lighten-2 white-text center">Deslize as logos e descubra quem são os parceiros da Clever Entertainment!</div>

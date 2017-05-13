@@ -55,7 +55,7 @@ $(document).ready(function() {
 
 	  if (($('#first_and_mid_name').val() != "") && !(pattLName.test($('#first_and_mid_name').val()))) {
 		  $('#first_and_mid_name').addClass('invalid');
-		  $('#first_and_mid_name_error').text("Nome em formato inválido");
+		  $('#first_and_mid_name_error').text("Nome em formato inválido. Favor não incluir números");
 		  state= false;
 	  }
 	  else if ($('#first_and_mid_name').val() == "") {
@@ -80,7 +80,7 @@ $(document).ready(function() {
 
 	  if (($('#last_name').val() != "") && !(pattLName.test($('#last_name').val()))) {
 		  $('#last_name').addClass('invalid');
-		  $('#last_name_error').text("Sobrenome em formato inválido");
+		  $('#last_name_error').text("Sobrenome em formato inválido. Favor não incluir números");
 		  state= false;
 	  }
 	  else if ($('#last_name').val() == "") {

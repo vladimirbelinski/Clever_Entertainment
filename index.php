@@ -2,20 +2,15 @@
 	 Autor: Vladimir Belinski 
 	 Descrição: o presente arquivo faz parte da resolução do primeiro trabalho do CCR Tópicos Especiais em Desenvolvimento Web,
 				CC-UFFS 2017.1, ministrado pela professora Ma. Andressa Sebben.
-				No trabalho é criado o front-end de uma página web responsiva de uma empresa fictícia de entretenimento. Dada a
-				natureza da empresa, que de certa forma exige a utilização de muitas mídias na página, foi tomado um cuidado principalmente com as imagens, de forma com que essas sejam de qualidade, mas ao mesmo tempo não muito pesadas.
-				Além disso, para tamanhos correspondentes a versões mobile também são carregadas imagens mais leves (menores
-				ou somente parte das imagens originais, quando isso não compremete a finalidade da imagem).
-				Em index.php é encontrada a página inicial do site, que contém notícias, informações sobre concertos e "anúncios"
+				No trabalho é criado o front-end de uma página web responsiva de uma empresa fictícia de entretenimento.
+				Em index.php é encontrada a página inicial do site, que contém notícias, informações sobre concertos, links
 				para conteúdos presentes nas demais páginas do site, etc.
-				As customizações de estilos podem ser encontradas em "css/myStyles.css".
-				A implementação das validações/funcões js podem ser encontradas em "js/myScript.js".
 -->
 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>Clever Entertainment</title>
+    <title lang="en">Clever Entertainment</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
     <link rel="shortcut icon" type="image/x-icon" href="images/logo_icon.png" />
@@ -32,7 +27,7 @@
 		<?php include('includes/nav.php'); ?>
 	</header>
     
-    <main>
+    <main role="main" id="main">
 		<section>
 			<!-- Aqui é feito uso do componente JS 'Parallax', que consiste em um efeito onde o conteúdo do fundo (neste caso, uma imagem) é movido a uma velocidade diferente do que o conteúdo do primeiro plano durante a rolagem -->
 			<div class="parallax-container valign-wrapper hiddenprint">
@@ -40,11 +35,11 @@
 					<!-- Conteúdo que ficará sobre a imagem -->
 					<div class="container">
 						<div class="row center">
-							<h5 class="card-panel col s12 teal lighten-1">Clever Entertainment, a agência de seus K-idols</h5>
+							<h5 class="card-panel col s12 teal lighten-1"><span lang="en">Clever Entertainment</span>, a agência de seus <span lang="en">K-idols</span></h5>
 						</div>
 						<div class="row center">
 							<!-- Aqui é feito uso do componente 'Button' do Materialize, no modo raised. Nesse botão tembém é usado 'waves', uma biblioteca externa incluída no Materialize que permite criar o efeito de tinta do Material Design	-->
-							<a role="button" href="about.php" id="contest-button" class="btn-large waves-effect waves-light teal lighten-1">Conheça a Clever</a>
+							<a role="button" href="about.php" id="contest-button" class="btn-large waves-effect waves-light teal lighten-1">Conheça a <span lang="en">Clever</span></a>
 						</div>
 					</div>
 				</div>
@@ -66,7 +61,7 @@
 							<div class="icon-block">
 								<h2 class="center grey-text text-darken-4"><i class="material-icons hiddenprint" aria-hidden="true">redeem</i></h2>
 								<h5 class="center">Fique ligado!</h5>
-								<p class="light">Dentro de algumas semanas a Clever Entertainment estará realizando um Survival Show com seus trainees para a formação de um novo grupo misto.</p><p class="light">A atração será televisionada todas as quintas-feiras às 23h00min pela tvN.</p> <p class="light">Em breve mais informações serão disponibilizadas. Não perca!</p>
+								<p class="light">Dentro de algumas semanas a <span lang="en">Clever Entertainment</span> estará realizando um <span lang="en">Survival Show</span> com seus <span lang="en">trainees</span> para a formação de um novo grupo misto.</p><p class="light">A atração será televisionada todas as quintas-feiras às 23h00min pela <span lang="en">tvN</span>.</p> <p class="light">Em breve mais informações serão disponibilizadas. Não perca!</p>
 							</div>
 						</div>
 					</section>
@@ -75,11 +70,11 @@
 						<div class="col s12 m6 xl4">
 							<div class="icon-block">
 								<h2 class="center grey-text text-darken-4"><i class="material-icons hiddenprint" aria-hidden="true">group</i></h2>
-								<h5 class="center">Meet&ampGreet</h5>
-								<p class="light">No dia 19/06/2017 será promovido o 3º Meet&ampGreet com artistas da Clever Entertainment, no qual se farão presentes os grupos BTS, TWICE e VIXX.</p>
+								<h5 class="center" lang="en">Meet&ampGreet</h5>
+								<p class="light">No dia 19/06/2017 será promovido o 3º <span lang="en">Meet&ampGreet</span> com artistas da <span lang="en">Clever Entertainment</span>, no qual se farão presentes os grupos <span lang="en">BTS</span>, <span lang="en">TWICE</span> e <span lang="en">VIXX</span>.</p>
 								<p>Data: 19/06/2017</p>
 								<p>Local: Centro de Cultura e Eventos Plínio Arlindo de Nes, Chapecó - SC, Brasil</p>
-								<p>Horários:<br>BTS: 13h00min às 15h00min <br>TWICE: 15h30min às 17h30min<br>VIXX: 18h00min às 20h00min</p>
+								<p>Horários:<br><span lang="en">BTS</span>: 13h00min às 15h00min <br><span lang="en">TWICE</span>: 15h30min às 17h30min<br><span lang="en">VIXX</span>: 18h00min às 20h00min</p>
 							</div>
 						</div>
 					</section>
@@ -91,15 +86,15 @@
 								<h5 class="center">Vídeos em Destaque</h5>
 								<figure class="col s12 m6 xl12">
 									<div class="video-container hiddenprint">
-										<iframe width="320" height="180" src="https://www.youtube.com/embed/4dL9RWFcJmI?ecver=2" frameborder="10" allowfullscreen></iframe>
+										<iframe lang="en, ko"width="320" height="180" src="https://www.youtube.com/embed/4dL9RWFcJmI?ecver=2" frameborder="10" allowfullscreen></iframe>
 									</div><br>
-									<figcaption>Produce 101 - Position Evaluation (Dance)</figcaption>
+									<figcaption lang="en">Produce 101 - Position Evaluation (Dance)</figcaption>
 								</figure>
 								<figure class="col s12 m6 xl12">
 									<div class="video-container hiddenprint">
-										<iframe width="320" height="180" src="https://www.youtube.com/embed/hmE9f-TEutc" frameborder="10" allowfullscreen></iframe>
+										<iframe lang="ko" width="320" height="180" src="https://www.youtube.com/embed/hmE9f-TEutc" frameborder="10" allowfullscreen></iframe>
 									</div><br>
-									<figcaption>BTS - Blood Sweat & Tears</figcaption>
+									<figcaption lang="en">BTS - Blood Sweat & Tears</figcaption>
 								</figure>
 							</div>
 						</div>
@@ -115,7 +110,7 @@
 					<!-- Conteúdo que ficará sobre a imagem -->
 					<div class="container">
 						<div class="row center">
-							<h5 class="card-panel col s12 yellow darken-4">Sempre sonhou em ser um Clever Artist? Agende já sua audição!</h5>
+							<h5 class="card-panel col s12 yellow darken-4">Sempre sonhou em ser um <span lang="en">Clever Artist</span>? Agende já sua audição!</h5>
 						</div>
 						<div class="row center">
 							<!-- Aqui é feito uso do componente 'Button' do Materialize, no modo raised. Nesse botão tembém é usado 'waves', uma biblioteca externa incluída no Materialize que permite criar o efeito de tinta do Material Design	-->
@@ -150,7 +145,7 @@
                                 </div>
 								<!-- div de conteúdo do card -->
                                 <div class="card-content"><p class="light">[05/04/2017]</p>
-                                    <p><strong>Clever Entertainment terá trainee participando do Produce 101</strong></p>
+									<p><strong><span lang="en">Clever Entertainment</span> terá <span lang="en">trainee</span> participando do <span lang="en">Produce 101</span></strong></p>
                                 </div>
                             </div>
                         </div>
@@ -162,7 +157,7 @@
                                 </div>
                                 <div class="card-content">
                                     <p class="light">[21/03/2017]</p>
-                                    <p><strong>Monsta X lança seu novo álbum: THE CLAN pt.2.5 [BEAUTIFUL]</strong></p>
+									<p><strong><span lang="en">Monsta X</span> lança seu novo álbum: <span lang="en">THE CLAN pt.2.5 [BEAUTIFUL]</span></strong></p>
                                 </div>
                             </div>
                         </div>
@@ -177,15 +172,15 @@
                             <div class="card-content grey-text text-darken-4 center">
                                 <p>PRÓXIMOS CONCERTOS</p>
                             </div>
-                            <div class="card-tabs">
+                            <div role="tab" class="card-tabs">
                                 <ul class="tabs tabs-fixed-width">
-									<li class="tab"><a href="#blackpink">BLACKPINK</a></li>
-                                    <li class="tab"><a class="active" href="#bts">BTS</a></li>
-                                    <li class="tab"><a href="#monstax">Monsta X</a></li>
-									<li class="tab"><a href="#nct">NCT</a></li>
-                                    <li class="tab"><a href="#shinee">SHINee</a></li>
-                                    <li class="tab"><a href="#twice">TWICE</a></li>
-                                    <li class="tab"><a href="#vixx">VIXX</a></li>
+									<li class="tab"><a href="#blackpink"><span lang="en">BLACKPINK</span></a></li>
+									<li class="tab"><a class="active" href="#bts"><span lang="en">BTS</span></a></li>
+									<li class="tab"><a href="#monstax"><span lang="en">Monsta X</span></a></li>
+									<li class="tab"><a href="#nct"><span lang="en">NCT 127</span></a></li>
+									<li class="tab"><a href="#shinee"><span lang="en">SHINee</span></a></li>
+									<li class="tab"><a href="#twice"><span lang="en">TWICE</span></a></li>
+									<li class="tab"><a href="#vixx"><span lang="en">VIXX</span></a></li>
                                 </ul>
                             </div>
                             <div class="card-content grey lighten-2 grey-text text-darken-4">
@@ -193,7 +188,7 @@
                                     <p>Data: Sem previsões. <br>Local: Sem previsões.</p>
                                 </div>
                                 <div id="bts">
-                                    <p>Data: 25/05/2017<br>Local:  Citibank Hall SP – Av. das Nações Unidas, 17955 – Santo Amaro, São Paulo/SP</p>
+									<p>Data: 25/05/2017<br>Local:  <span lang="en">Citibank Hall</span> SP – Av. das Nações Unidas, 17955 – Santo Amaro, São Paulo/SP</p>
                                 </div>
                                 <div id="monstax">
                                     <p>Data: Sem previsões. <br>Local: Sem previsões.</p>
@@ -219,7 +214,7 @@
     </main>
 	
 	<!-- Rodapé da página: faz uso do componente footer do Materialize. As imagens do rodapé são carregadas de forma diferente de acordo com o tamanho da tela do dispositivo, o que faz, por exemplo, que para dispositivos móveis sejam carregadas imagens mais leves -->
-    <footer class="page-footer grey darken-4">
+    <footer role="contentinfo" class="page-footer grey darken-4" id="footer">
 		<!-- Inclusão do código do rodapé comum a todas as páginas. Tal código pode ser encontrado em 'includes/footer.php' -->
         <?php include('includes/footer.php'); ?>
     </footer>

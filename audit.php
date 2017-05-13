@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>Clever Entertainment</title>
+    <title lang="en">Clever Entertainment</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
     <link rel="shortcut icon" type="image/x-icon" href="images/logo_icon.png" />
@@ -24,17 +24,17 @@
 		<!-- Inclusão do menu de navegação comum a todas as páginas. O código do menu de navegação pode ser encontrado em 'includes/nav.php' -->
 		<?php include('includes/nav.php'); ?>
 		<!-- Breadcrumbs -->
-		<nav class="my_breadcrumbs" role="navigation">
+		<nav class="my_breadcrumbs" role="navigation" aria-label="Breadcrumbs">
 			<div class="nav-wrapper">
 				<div class="col s12 teal lighten-2">
-					<a href="index.php" class="breadcrumb">Home</a>
+					<a href="index.php" class="breadcrumb"><span lang="en">Home</span></a>
 					<a class="breadcrumb">Audições</a>
 				</div>
 			</div>
 		</nav>
 	</header>
     
-    <main>		
+    <main role="main" id="main">
         <div class="container">
 			<div class="section">
 				<section>
@@ -78,7 +78,7 @@
 								<div class="input-field col s12 m6 l6 xl6">											
 									<label for="radio-box" class="sr-only">Sexo (obrigatório)</label>
 									<i class="material-icons hiddenprint prefix" aria-hidden="true">perm_identity</i>
-									<div class="radio-box" id="radio-box">
+									<div role="radiogroup" class="radio-box" id="radio-box">
 										<input type="radio" id="gender_male" name="cgender" class="with-gap validate"/>
 										<label name="cgender" for="gender_male" id="gender_male">Masculino</label>
 										<input type="radio" id="gender_female" name="cgender"  class="with-gap"/>
@@ -167,7 +167,7 @@
     </main>
       
 	<!-- Rodapé da página: faz uso do componente footer do Materialize. As imagens do rodapé são carregadas de forma diferente de acordo com o tamanho da tela do dispositivo, o que faz, por exemplo, que para dispositivos móveis sejam carregadas imagens mais leves -->
-    <footer class="page-footer grey darken-4">
+    <footer role="contentinfo" class="page-footer grey darken-4" id="footer">
         <!-- Inclusão do código do rodapé comum a todas as páginas. Tal código pode ser encontrado em 'includes/footer.php' -->
         <?php include('includes/footer.php'); ?>
     </footer>

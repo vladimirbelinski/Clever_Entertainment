@@ -24,5 +24,5 @@ $(document).ready(function() {
 	var output = buildTemplate(artists);
 	$("#artistsContent").html(output);
 	// Após os cards terem sido renderizados o footer é apresentado (para não aparecer o footer rapidamente no meio da página)
-	$('#artistsFooterDelayed').removeClass('hiddenfooter');
+	$('#footer').removeClass('hiddenfooter');
 });

@@ -21,5 +21,5 @@ $(document).ready(function() {
 	var output = buildTemplate(news);
 	$("#newsContent").html(output);
 	// Após os cards terem sido renderizados o footer é apresentado (para não aparecer o footer rapidamente no meio da página)
-	$('#newsFooterDelayed').removeClass('hiddenfooter');
+	$('#footer').removeClass('hiddenfooter');
 });

@@ -50,6 +50,6 @@
 <!-- Div de direitos autorais-->
 <div class="footer-copyright grey darken-4">
 	<div class="container">
-		Copyright © 2017 CLEVER ENTERTAINMENT, TODOS OS DIREITOS RESERVADOS.
+		<span lang="en">Copyright</span> © 2017 <span lang="en">CLEVER ENTERTAINMENT</span>, TODOS OS DIREITOS RESERVADOS.
 	</div>
 </div>

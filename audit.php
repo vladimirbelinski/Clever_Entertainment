@@ -80,11 +80,11 @@
 									<i class="material-icons hiddenprint prefix" aria-hidden="true">perm_identity</i>
 									<div role="radiogroup" class="radio-box" id="radio-box">
 										<input type="radio" id="gender_male" name="cgender" class="with-gap validate"/>
-										<label name="cgender" for="gender_male" id="gender_male">Masculino</label>
+										<label for="gender_male" >Masculino</label>
 										<input type="radio" id="gender_female" name="cgender"  class="with-gap"/>
-										<label name="cgender" for="gender_female" id="gender_female">Feminino</label>
+										<label for="gender_female" >Feminino</label>
 										<input type="radio" id="gender_other" name="cgender" class="with-gap"/>
-										<label name="cgender" for="gender_other" id="gender_other">Outro</label>
+										<label for="gender_other">Outro</label>
 									</div>
 									<!-- Nessa div são inseridas mensagens de erro acerca do campo, se existirem -->
 									<div class="required_error_radio" id="gender_error"></div>

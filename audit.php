@@ -52,7 +52,7 @@
 								<div class="input-field col s12 m12 l6 xl6">
 									<i class="material-icons hiddenprint prefix" aria-hidden="true">account_circle</i>
 									<label for="first_and_mid_name" class="sr-only">Nome (obrigatório)</label>
-									<input type="text" id="first_and_mid_name" name="first_and_mid_name" placeholder="Nome *" autofocus>
+									<input type="text" id="first_and_mid_name" name="first_and_mid_name" placeholder="Nome (obrigatório)" autofocus>
 									<!-- Nessa div são inseridas mensagens de erro acerca do campo, se existirem -->
 									<div class="required_error" id="first_and_mid_name_error"></div>
 								</div>
@@ -60,7 +60,7 @@
 								<div class="input-field col s12 m12 l6 xl6">
 									<i class="material-icons hiddenprint prefix" aria-hidden="true">account_circle</i>
 									<label for="last_name" class="sr-only">Sobrenome (obrigatório)</label>
-									<input type="text" id="last_name" name="last_name" placeholder="Sobrenome *">
+									<input type="text" id="last_name" name="last_name" placeholder="Sobrenome (obrigatório)">
 									<!-- Nessa div são inseridas mensagens de erro acerca do campo, se existirem -->
 									<div class="required_error" id="last_name_error"></div>
 								</div>
@@ -70,14 +70,14 @@
 								<div class="input-field col s12 m6 l6 xl6">
 									<i class="material-icons hiddenprint prefix" aria-hidden="true">today</i>
 									<label for="birthday_date" class="sr-only">Data de nascimento (obrigatório)</label>
-									<input type="date" id="birthday_date" name="birthday_date" placeholder="Data de nascimento *" class="datepicker picker__input" required>
+									<input type="date" id="birthday_date" name="birthday_date" placeholder="Data de nascimento (obrigatório)" class="datepicker picker__input" required>
 									<!-- Nessa div são inseridas mensagens de erro acerca do campo, se existirem -->
 									<div class="required_error" id="birthday_date_error"></div>
 								</div>
 								<!-- Campo de inserção de sexo - tipo radio. Esse campo é validado em 'js/myScript.js', sendo obrigatório. Sua label está visível apenas para leitores de tela -->
 								<div class="input-field col s12 m6 l6 xl6">											
-									<label for="radio-box" class="sr-only">Sexo (obrigatório)</label>
-									<i class="material-icons hiddenprint prefix" aria-hidden="true">perm_identity</i>
+									<label for="radio-box" class="radio-label">Sexo (obrigatório)</label>
+									<i class="material-icons hiddenprint prefix" aria-hidden="true" id="radio-icon">perm_identity</i>
 									<div role="radiogroup" class="radio-box" id="radio-box">
 										<input type="radio" id="gender_male" name="cgender" class="with-gap validate"/>
 										<label for="gender_male" >Masculino</label>
@@ -95,7 +95,7 @@
 								<div class="input-field col s12 m12 l6 xl6">
 									<i class="material-icons hiddenprint prefix" aria-hidden="true">email</i>
 									<label for="email" class="sr-only">Email (obrigatório)</label>
-									<input type="email" id="email" name="email" placeholder="Email * (e.g. nome@provedor.com)">
+									<input type="email" id="email" name="email" placeholder="Email (e.g. nome@provedor.com) (obrigatório)">
 									<!-- Nessa div são inseridas mensagens de erro acerca do campo, se existirem -->
 									<div class="required_error" id="email_error"></div>
 								</div>
@@ -114,7 +114,7 @@
 									<i class="material-icons hiddenprint prefix" aria-hidden="true">list</i>
 									<label for="audit_category" class="sr-only">Escolha a(s) categoria(s) para audição (obrigatório)</label>
 									<select name="audit_category" id="audit_category" multiple>
-										<option value="" disabled selected>Escolha a(s) categoria(s) para audição *</option>
+										<option value="" disabled selected>Escolha a(s) categoria(s) para audição (obrigatório)</option>
 										<option value="1">Ator/Atriz</option>
 										<option value="2">Cantor(a)</option>
 										<option value="3">Dançarino(a)</option>
@@ -128,7 +128,7 @@
 									<i class="material-icons hiddenprint prefix" aria-hidden="true">location_on</i>
 									<label for="audit_country" class="sr-only">Escolha o país da audição (obrigatório)</label>
 									<select name="audit_country" id="audit_country" class="icons">
-										<option value="" disabled selected="selected">Escolha o país da audição *</option>
+										<option value="" disabled selected="selected">Escolha o país da audição (obrigatório)</option>
 										<option value="1" data-icon="images/select/Brazil.png" class="circle">Brasil</option>
 										<option value="2" data-icon="images/select/Canada.png" class="circle">Canadá</option>
 										<option value="3" data-icon="images/select/China.png" class="circle">China</option>
@@ -151,7 +151,7 @@
 							<div class="row">
 								<!-- div contendo mensagens informativas -->
 								<div class="col s11 offset-s1 xl7 offset-xl1">
-								<p class="notes">* Campo obrigatório</p><p class="notes">Após o envio dos dados, esses serão analisados por nossa equipe, que entrará em contato via e-mail agendando a data e local de sua audição de acordo com os dados informados.</p>
+								<p class="notes">Após o envio dos dados, esses serão analisados por nossa equipe, que entrará em contato via e-mail agendando a data e local de sua audição de acordo com os dados informados.</p>
 								</div>
 								<div class="input-field col s11 offset-s1 xl3 offset-xl1">
 									<!-- Botão de submissão (componente button com tipo submit do Materialize) do formulário (associado ao formulário 'audit_register'). As funções de verificação do formulário não estão associadas ao botão, mas sim a eventos de submit desse formulário e de alteração de seus campos. Nesse botão também é usado 'waves', uma biblioteca externa incluída no Materialize que permite criar o efeito de tinta do Material Design -->

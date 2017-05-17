@@ -184,7 +184,7 @@ $(document).ready(function() {
 		var e = document.getElementById("audit_country");
 		var strUser = e.options[e.selectedIndex].text;
 
-	  if (strUser == "Escolha o país da audição *") {
+	  if (strUser == "Escolha o país da audição (obrigatório)") {
 		  $('#audit_country_error').text("Preenchimento obrigatório");
 		  state= false;
 	  }

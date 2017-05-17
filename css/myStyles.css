@@ -5,16 +5,6 @@
 			  estilo realizadas nos elementos (tags, classes, divs, etc) utilizados no trabalho.
 */
 
-
-.radio-label {
-    margin-left: 46px;
-    margin-top: -0.9rem;
-}
-
-#radio-icon {
-	padding-top: 8px;
-}
-
 /* Customização do menu de navegação */
 nav ul a,
 nav .brand-logo {
@@ -94,6 +84,11 @@ figcaption {
 .radio-box {
 	margin-left: 32px;
 	margin-top: 8px;
+}
+
+.radio-label {
+    margin-left: 46px;
+    margin-top: -0.9rem;
 }
 
 /* Customização das imagens dos cards dos artistas ('artists.html') */

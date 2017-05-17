@@ -77,7 +77,7 @@
 								<!-- Campo de inserção de sexo - tipo radio. Esse campo é validado em 'js/myScript.js', sendo obrigatório. Sua label está visível apenas para leitores de tela -->
 								<div class="input-field col s12 m6 l6 xl6">											
 									<label for="radio-box" class="radio-label">Sexo (obrigatório)</label>
-									<i class="material-icons hiddenprint prefix" aria-hidden="true" id="radio-icon">perm_identity</i>
+									<i class="material-icons hiddenprint prefix" aria-hidden="true">perm_identity</i>
 									<div role="radiogroup" class="radio-box" id="radio-box">
 										<input type="radio" id="gender_male" name="cgender" class="with-gap validate"/>
 										<label for="gender_male" >Masculino</label>

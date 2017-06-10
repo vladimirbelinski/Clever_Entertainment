@@ -9,7 +9,7 @@
 $("#menu").html(
 	"<div class=\"nav-wrapper container\">\
 		<!-- Logo do menu: para telas de tamanho > a 600px é carregada uma imagem maior. Para telas de tamanho inferior é carregada uma imagem menor. Isso faz com que em dispositivos móveis, por exemplo, seja carregada uma imagem mais leve  -->\
-		<a id=\"logo-container\" href=\"index.php\" class=\"brand-logo\">\
+		<a id=\"logo-container\" href=\"index.html\" class=\"brand-logo\">\
 			<picture class=\"hiddenprint\">\
 				<source media=\"(min-width: 601px)\" srcset=\"images/nav/logoB.jpg\">\
 				<source media=\"(min-width: 200px)\" srcset=\"images/nav/logoBSmall.jpg\">\
@@ -21,11 +21,11 @@ $("#menu").html(
 		<ul class=\"right hide-on-med-and-down\">\
 			<li><a accesskey=\"1\" href=\"#main\" id=\"linkContent\" class=\"sr-only\">Ir para o conteúdo<span>1</span></a></li>\
 			<li><a accesskey=\"2\" href=\"#footer\" id=\"linkFooter\" class=\"sr-only\">Ir para o rodapé<span>2</span></a></li>\
-			<li><a href=\"index.php\"><span lang=\"en\">Home</span></a></li>\
-			<li><a href=\"about.php\">Sobre <span lang=\"en\">Clever</span></a></li>\
-			<li><a href=\"artists.php\">Artistas</a></li>\
-			<li><a href=\"news.php\">Notícias</a></li>\
-			<li><a href=\"audit.php\">Audições</a></li>\
+			<li><a href=\"index.html\"><span lang=\"en\">Home</span></a></li>\
+			<li><a href=\"about.html\">Sobre <span lang=\"en\">Clever</span></a></li>\
+			<li><a href=\"artists.html\">Artistas</a></li>\
+			<li><a href=\"news.html\">Notícias</a></li>\
+			<li><a href=\"audit.html\">Audições</a></li>\
 		</ul>\
 		<!-- Itens do menu lateral -->\
 		<ul class=\"side-nav\" id=\"nav-mobile\" aria-expanded=\"true\">\
@@ -37,10 +37,10 @@ $("#menu").html(
 			</li>\
 			<li><a accesskey=\"1\" href=\"#main\" id=\"linkContent\" class=\"sr-only\">Ir para o conteúdo<span>1</span></a></li>\
 			<li><a accesskey=\"2\" href=\"#footer\" id=\"linkFooter\" class=\"sr-only\">Ir para o rodapé<span>2</span></a></li>\
-			<li><a href=\"index.php\"><span lang=\"en\">Home</span></a></li>\
-			<li><a href=\"about.php\">Sobre <span lang=\"en\">Clever</span></a></li>\
-			<li><a href=\"artists.php\">Artistas</a></li>\
-			<li><a href=\"news.php\">Notícias</a></li>\
-			<li><a href=\"audit.php\">Audições</a></li>\
+			<li><a href=\"index.html\"><span lang=\"en\">Home</span></a></li>\
+			<li><a href=\"about.html\">Sobre <span lang=\"en\">Clever</span></a></li>\
+			<li><a href=\"artists.html\">Artistas</a></li>\
+			<li><a href=\"news.html\">Notícias</a></li>\
+			<li><a href=\"audit.html\">Audições</a></li>\
 		</ul>\
 	</div>");

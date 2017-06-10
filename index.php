@@ -23,8 +23,8 @@
 <body>
 	<!-- Cabeçalho da página -->
     <header>
-		<!-- Inclusão do menu de navegação comum a todas as páginas. O código do menu de navegação pode ser encontrado em 'includes/nav.php' -->
-		<?php include('includes/nav.php'); ?>
+		<!-- Inclusão do menu de navegação comum a todas as páginas. O código do menu de navegação pode ser encontrado em 'js/menu.js' -->
+		<nav class="white hiddenprint" id="menu" role="navigation" aria-label="Menu principal"></nav>
 	</header>
     
     <main role="main" id="main">
@@ -215,14 +215,15 @@
 	
 	<!-- Rodapé da página: faz uso do componente footer do Materialize. As imagens do rodapé são carregadas de forma diferente de acordo com o tamanho da tela do dispositivo, o que faz, por exemplo, que para dispositivos móveis sejam carregadas imagens mais leves -->
     <footer role="contentinfo" class="page-footer grey darken-4" id="footer">
-		<!-- Inclusão do código do rodapé comum a todas as páginas. Tal código pode ser encontrado em 'includes/footer.php' -->
-        <?php include('includes/footer.php'); ?>
+		<!-- Inclusão do código do rodapé comum a todas as páginas. Tal código pode ser encontrado em 'js/footer.js' -->
+		<div id="commonFooter"></div>
     </footer>
     
     <!-- Scripts -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/materialize.js"></script>
 	<script src="js/myScript.js"></script>
-    
+    <script src="js/menu.js"></script>
+	<script src="js/footer.js"></script>
 </body>
 </html>

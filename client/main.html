@@ -1,0 +1,136 @@
+<!-- Arquivo: main.html
+   	 Autor: Vladimir Belinski
+     Descrição: o presente arquivo faz parte da resolução do segundo trabalho do CCR Tópicos Especiais em Desenvolvimento Web,
+			  CC-UFFS 2017.1, ministrado pela professora Ma. Andressa Sebben. Nele podem ser encontrados os templates comuns às
+			  demais páginas: cabeçalho da páginas, rodapé da páginas layouts...
+-->
+
+<head>
+	<title lang="en">Clever Entertainment</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+	<link rel="shortcut icon" type="image/x-icon" href="images/logo_icon.png" />
+	<!-- CSS: Ícones-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<template name="common_layout">
+	{{> yield "header"}}
+	{{> yield "breadcrumbs"}}
+	{{> yield "main"}}
+	{{> yield "footer"}}
+</template>
+
+<template name="index_layout">
+	{{> yield "header"}}
+	{{> yield "main"}}
+	{{> yield "footer"}}
+</template>
+
+<template name="fanart_layout">
+	{{> yield "header"}}
+	{{> yield "breadcrumbs"}}
+	{{> yield "welcome"}}
+    {{> yield "add_fanart"}}
+    {{> yield "fanarts"}}
+	{{> yield "footer"}}
+</template>
+
+<!-- Template comum de cabeçalho -->
+<template name="header">
+	<header>
+		<nav class="white hiddenprint" id="menu" role="navigation" aria-label="Menu principal">
+			<div class="nav-wrapper container">
+				<!-- Logo do menu: para telas de tamanho > a 600px é carregada uma imagem maior. Para telas de tamanho inferior é carregada uma imagem menor. Isso faz com que em dispositivos móveis, por exemplo, seja carregada uma imagem mais leve  -->
+				<a id="logo-container" href="/index" class="brand-logo">
+					<picture class="hiddenprint">
+						<source media="(min-width: 601px)" srcset="images/nav/logoB.jpg">
+						<source media="(min-width: 200px)" srcset="images/nav/logoBSmall.jpg">
+						<img src="images/nav/logoB.jpg" alt="Logo da Clever Entertainment" style="width:auto">
+					</picture>
+				</a>
+				<a href="#" data-activates="nav-mobile" class="button-collapse" id="menu_sidenav_button"><i class="material-icons hiddenprint">menu</i></a>
+				<!-- Itens do menu normal -->
+				<ul class="right hide-on-med-and-down">
+					<li><a accesskey="1" href="#main" id="linkContent" class="sr-only">Ir para o conteúdo<span>1</span></a></li>
+					<li><a accesskey="2" href="#footer" id="linkFooter" class="sr-only">Ir para o rodapé<span>2</span></a></li>
+					<li><a href="/index"><span lang="en">Home</span></a></li>
+					<li><a href="/about">Sobre <span lang="en">Clever</span></a></li>
+					<li><a href="/artists">Artistas</a></li>
+					<li><a href="/news">Notícias</a></li>
+					<li><a href="/audit">Audições</a></li>
+				</ul>
+				<!-- Itens do menu lateral -->
+				<ul class="side-nav" id="nav-mobile" aria-expanded="true">
+					<li><div class="userView">
+							<div class="background">
+								<img src="images/nav/logoBSmall.jpg" alt="Logo da Clever Entertainment">
+							</div>
+						</div>
+					</li>
+					<li><a accesskey="1" href="#main" id="linkContent" class="sr-only">Ir para o conteúdo<span>1</span></a></li>
+					<li><a accesskey="2" href="#footer" id="linkFooter" class="sr-only">Ir para o rodapé<span>2</span></a></li>
+					<li><a href="/index" onclick="$('.button-collapse').sideNav('hide');"><span lang="en">Home</span></a></li>
+					<li><a href="/about" onclick="$('.button-collapse').sideNav('hide');">Sobre <span lang="en">Clever</span></a></li>
+					<li><a href="/artists" onclick="$('.button-collapse').sideNav('hide');">Artistas</a></li>
+					<li><a href="/news" onclick="$('.button-collapse').sideNav('hide');">Notícias</a></li>
+					<li><a href="/audit" onclick="$('.button-collapse').sideNav('hide');">Audições</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+</template>
+
+<!-- Template comum de rodapé -->
+<template name="footer">
+	<footer role="contentinfo" class="page-footer grey darken-4" id="footer">
+		<div class="container">
+			<div class="row">
+				<!-- Logo da empresa -->
+				<div class="col s12 m5 center hiddenprint">
+					<picture>
+						<source media="(min-width: 993px)" srcset="images/footer/logo.jpg">
+						<source media="(min-width: 200px)" srcset="images/footer/logoSmall.jpg">
+						<img src="images/footer/logo.jpg" alt="Logo da Clever Entertainment" style="width:auto">
+					</picture>
+				</div>
+				<!-- Contato da empresa -->
+				<div class="col s5 offset-s1 m3 offset-m1">
+					<h5 class="white-text">Contato</h5>
+					<p class="white-text">+55(49)3333-3333 contact@clever.com</p>
+				</div>
+				<!-- Links para outras mídias da empresa -->
+				<div class="col s5 offset-s1 m3 hiddenprint">
+					<h5 class="white-text">Nos siga</h5>
+					<a href="https://open.spotify.com/user/vladimirbelinski">
+						<picture class="hiddenprint">
+							<source media="(min-width: 993px)" srcset="images/footer/spotify.png">
+							<source media="(min-width: 200px)" srcset="images/footer/spotifySmall.png">
+							<img src="images/footer/spotify.png" alt="Logo do Spotify" style="width:auto">
+						</picture>
+					</a>
+					<a href="https://www.facebook.com/vlbelinski">
+						<picture class="hiddenprint">
+							<source media="(min-width: 993px)" srcset="images/footer/facebook.png">
+							<source media="(min-width: 200px)" srcset="images/footer/facebookSmall.png">
+							<img src="images/footer/facebook.png" alt="Logo do Facebook" style="width:auto">
+						</picture>
+					</a>
+					<a href="https://github.com/vladimirbelinski/Projeto_1__WEB">
+						<picture class="hiddenprint">
+							<source media="(min-width: 993px)" srcset="images/footer/github.png">
+							<source media="(min-width: 200px)" srcset="images/footer/githubSmall.png">
+							<img src="images/footer/github.png" alt="Logo do GitHub" style="width:auto">
+						</picture>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- Div de direitos autorais-->
+		<div class="footer-copyright grey darken-4">
+			<div class="container">
+				<span lang="en">Copyright</span> © 2017 <span lang="en">CLEVER ENTERTAINMENT</span>, TODOS OS DIREITOS RESERVADOS.
+			</div>
+		</div>
+	</footer>
+</template>

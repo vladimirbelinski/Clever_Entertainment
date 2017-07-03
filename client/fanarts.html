@@ -1,0 +1,120 @@
+<!-- Arquivo: fanarts.html
+   	 Autor: Vladimir Belinski
+     Descrição: o presente arquivo faz parte da resolução do segundo trabalho do CCR Tópicos Especiais em Desenvolvimento Web,
+			  CC-UFFS 2017.1, ministrado pela professora Ma. Andressa Sebben. Nele podem ser encontrados os templates específicos
+			  de /fanarts.
+-->
+
+<!-- Template de breadcrumbs-->
+<template name="breadcrumbs_fanarts">
+	<!-- Breadcrumbs -->
+		<nav class="my_breadcrumbs" role="navigation" aria-label="Breadcrumbs">
+			<div class="nav-wrapper">
+				<div class="col s12 teal lighten-2">
+					<a href="/index" onclick="$(window).scrollTop(0);" class="breadcrumb"><span lang="en">Home</span></a>
+					<a href="/news" onclick="$(window).scrollTop(0);" class="breadcrumb">Notícias</a>
+					<a class="breadcrumb">Fanarts</a>
+				</div>
+			</div>
+		</nav>
+</template>
+
+
+<!-- Templates de /fanart -->
+
+<!-- Template de boas vindas ao usuário -->
+<template name="welcome">
+	<div class="container">
+		<div class="row">
+		    <div class="container col s12 m10">
+		        <h5>Bem vindo(a){{usuario}}!</h5>
+		    </div>
+			<div class="container col s12 m2">
+				<p role="button" class="hiddenprint">{{> loginButtons }}</p>
+		    </div>
+		</div>
+	</div>
+</template>
+
+<!-- Template de adição de um fanart -->
+<template name="add_fanart">
+	<div class="container" id="fanart_modal">
+		<!-- Modal Trigger -->
+		<div class="col s12">
+				{{#if currentUser}}
+					<a class="waves-effect waves-light btn" href="#form_modal" id="show_add_button">Adicionar Fanart</a>
+				{{/if}}
+		</div>
+	  	<!-- Modal Structure -->
+		<div id="form_modal" class="modal">
+			<div class="modal-content">
+				<form role="form" id="form_fanart" name="form_fanart" class="col s12">
+					<div class="row">
+						<div class="input-field col s12">
+							<i class="material-icons hiddenprint prefix" aria-hidden="true">perm_media</i>
+							<label for="src">URL do fanart (obrigatório)</label>
+							<input type="url" id="src" name="src" autofocus>
+							<!-- Nessa div são inseridas mensagens de erro acerca do campo, se existirem -->
+							<div class="required_error" id="url_error"></div>
+						</div>
+						<div class="input-field col s12">
+							<i class="material-icons hiddenprint prefix" aria-hidden="true">input</i>
+							<label for="title">Título do fanart (obrigatório)</label>
+							<input type="text" id="title" name="title">
+							<!-- Nessa div são inseridas mensagens de erro acerca do campo, se existirem -->
+							<div class="required_error" id="title_error"></div>
+						</div>
+						<div class="input-field col s12">
+							<i class="material-icons hiddenprint prefix" aria-hidden="true">perm_identity</i>
+							<label for="author">Autor do fanart (obrigatório)</label>
+							<input type="text" id="author" name="author">
+							<!-- Nessa div são inseridas mensagens de erro acerca do campo, se existirem -->
+							<div class="required_error" id="author_error"></div>
+						</div>
+					</div>
+				</form>
+			</div>
+		<div class="modal-footer">
+		  <button role="button" class="modal-action waves-effect waves-green btn-flat" type="submit" id="submitImage" form="form_fanart" href="#!">Enviar<i class="material-icons hiddenprint right">send</i></button>
+		  <button role="button" href="#!" class="modal-action modal-close waves-effect waves-red btn-flat" id="cancel_fanart">Cancelar</button>
+		  </div>
+		</div>
+	</div>
+</template>
+
+<!-- Template dos fanarts -->
+<template name="fanarts">
+	<div class="container">
+		<div class="row">
+			{{#each images}}
+			<div class="col s12 m6 xl4" id="{{_id}}">
+				<!-- Aqui é feito uso de um card, um componente do Materialize que apresenta uma maneira conveniente de exibir conteúdos compostos por diferentes tipos de objetos -->
+				<div class="card">
+					<div class="card-image fanart_card hiddenprint">
+						<img class="materialboxed fanart_image" data-caption="{{title}}" src="{{src}}" alt="{{title}}">
+					</div>
+					<!-- div correspondente à imagem do card. Aqui também é feito uso do componente JS 'Material Box' que permite ampliar e reduzir um imagem de maneira suave -->
+					<div class="card-image hiddenprint">
+						{{#if verify_user createdBy}}
+							<a class="btn-floating halfway-fab waves-effect waves-light teal darken-2 small" id="remove_image"><i class="material-icons">delete</i></a>
+						{{/if}}
+					</div>
+					<!-- div correspondente ao conteúdo do card -->
+					<div class="card-content">
+					<h5> {{title}} </h5>
+						<p><strong>Autor:</strong> {{author}} </p>
+						<p><strong>Uploader:</strong><a href="#" class="filter"> {{getUser createdBy}}</a></p>
+						{{#if active_filter}}
+							<p>Mostrando imagens do uploader {{get_user_filter}}<a href="#" class="remove_filter"> [Remover filtro]</a></p>
+						{{/if}}
+						</div>
+					<div class="card-action">
+						<p>Avaliação do uploader:</p>
+						{{> starsRating size='md' star='\\f005' class='awesome rate_image' mutable=true image_id=_id rating=stars}}
+					</div>
+				</div>
+			 </div>
+			{{/each}}
+		</div>
+	</div>
+</template>

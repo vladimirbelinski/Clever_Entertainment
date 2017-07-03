@@ -1,0 +1,60 @@
+<!-- Arquivo: artists.html
+   	 Autor: Vladimir Belinski
+     Descrição: o presente arquivo faz parte da resolução do segundo trabalho do CCR Tópicos Especiais em Desenvolvimento Web,
+			  CC-UFFS 2017.1, ministrado pela professora Ma. Andressa Sebben. Nele podem ser encontrados os templates específicos
+			  de /artists.
+-->
+
+<!-- Template de breadcrumbs-->
+<template name="breadcrumbs_artists">
+	<!-- Breadcrumbs -->
+		<nav class="my_breadcrumbs" role="navigation" aria-label="Breadcrumbs">
+			<div class="nav-wrapper">
+				<div class="col s12 teal lighten-2">
+					<a href="/index" onclick="$(window).scrollTop(0);" class="breadcrumb"><span lang="en">Home</span></a>
+					<a class="breadcrumb">Artistas</a>
+				</div>
+			</div>
+		</nav>
+</template>
+
+<!-- Template /artists -->
+<template name="artists">
+	<main role="main" id="main">
+		<div class="container">
+			<div class="section">
+				<section>
+					<!-- Título informativo da página com ícone -->
+					<div class="row">
+						<div class="col s12">
+							<h5 class="grey-text text-darken-4"><i class="material-icons hiddenprint" aria-hidden="true">grade</i> ARTISTAS</h5>
+						</div>
+					</div>
+					<!-- Aqui são encontrados os cards com informações sobre os artistas da empresa. O conteúdo dos cards pode ser encontrado em 'artists.js' -->
+					<div class="row">
+						{{#each artists_array}}
+						<div class="col s12 m6 xl4">
+							<!-- Aqui é feito uso de um card, um componente do Materialize que apresenta uma maneira conveniente de exibir conteúdos compostos por diferentes tipos de objetos -->
+							<div class="card">
+								<!-- div correspondente à imagem do card. Aqui também é feito uso do componente JS 'Material Box' que permite ampliar e reduzir um imagem de maneira suave -->
+								<div class="card-image artists hiddenprint">
+									<img class="materialboxed" data-caption="{{caption}}" src="{{imageSrc}}" alt="{{alt}}">
+								</div>
+								<!-- div correspondente ao conteúdo do card -->
+								<div class="card-content">
+									<h5>{{caption}}</h5>
+								</div>
+								<!-- Nesta div poderiam ter sido utilizados links relacionados ao card. Preferiu-se fazer uso de outro componente do Materialize, os 'chips', que representam pequenos blocos de informação que podem representar contatos, marcadores, etc -->
+								<div class="card-action">
+									<div class="chip">{{chip1}}</div>
+									<div class="chip">{{chip2}}</div>
+								</div>
+							</div>
+						</div>
+						{{/each}}
+					</div>
+				</section>
+			</div>
+		</div>
+	</main>
+</template>
